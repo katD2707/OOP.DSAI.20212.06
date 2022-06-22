@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane cache="true" depthTest="DISABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="1037.0" styleClass="background" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="314.0" prefWidth="1013.0">
+         <children>
+            <AnchorPane prefHeight="314.0" prefWidth="30.0" styleClass="labelwithimage1" stylesheets="@application.css">
+               <children>
+                  <ToggleButton alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutY="124.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="59.0" styleClass="octave" text="C3" AnchorPane.rightAnchor="34.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </ToggleButton>
+               </children>
+               <HBox.margin>
+                  <Insets right="-20.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <StackPane alignment="TOP_CENTER" prefHeight="314.0" prefWidth="141.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="70.0" styleClass="bevel-grey" text="C3">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="67.0" styleClass="bevel-grey" text="D3">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Button>
+                     </children>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </HBox>
+                  <Button alignment="BOTTOM_CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="202.0" prefWidth="60.0" styleClass="style2" stylesheets="@application.css" text="C" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+            </StackPane>
+            <StackPane alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="141.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="76.0" styleClass="bevel-grey" text="E3">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="74.0" styleClass="bevel-grey" text="F3">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button alignment="BOTTOM_CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="202.0" prefWidth="60.0" styleClass="style2" stylesheets="@application.css" text="C" textAlignment="CENTER">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+            </StackPane>
+            <StackPane alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="142.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="81.0" styleClass="bevel-grey" text="G3">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="82.0" styleClass="bevel-grey" text="A3" />
+                     </children>
+                  </HBox>
+                  <Button alignment="BOTTOM_CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="202.0" prefWidth="56.0" styleClass="style2" stylesheets="@application.css" text="C" textAlignment="CENTER">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+            </StackPane>
+            <StackPane alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="141.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="95.0" styleClass="bevel-grey" text="B3">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="93.0" styleClass="bevel-grey" text="C4" />
+                     </children>
+                  </HBox>
+                  <Button alignment="BOTTOM_CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="202.0" prefWidth="60.0" styleClass="style2" stylesheets="@application.css" text="C" textAlignment="CENTER">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+            </StackPane>
+            <StackPane alignment="TOP_CENTER" layoutX="128.0" layoutY="10.0" prefHeight="304.0" prefWidth="141.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="105.0" styleClass="bevel-grey" text="D4">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="102.0" styleClass="bevel-grey" text="E4" />
+                     </children>
+                  </HBox>
+                  <Button alignment="BOTTOM_CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="202.0" prefWidth="60.0" styleClass="style2" stylesheets="@application.css" text="C">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="2.0" />
+               </HBox.margin>
+            </StackPane>
+            <StackPane alignment="TOP_CENTER" layoutX="128.0" layoutY="10.0" prefHeight="304.0" prefWidth="141.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="86.0" styleClass="bevel-grey" text="F4">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="82.0" styleClass="bevel-grey" text="G4" />
+                     </children>
+                  </HBox>
+                  <Button alignment="BOTTOM_CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="206.0" prefWidth="60.0" styleClass="style2" stylesheets="@application.css" text="C#" textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+            </StackPane>
+            <StackPane alignment="TOP_CENTER" layoutX="128.0" layoutY="10.0" prefHeight="304.0" prefWidth="141.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="92.0" styleClass="bevel-grey" text="A4">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="314.0" prefWidth="90.0" styleClass="bevel-grey" text="B4" />
+                     </children>
+                  </HBox>
+                  <Button alignment="BOTTOM_CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="202.0" prefWidth="60.0" styleClass="style2" stylesheets="@application.css" text="C" textAlignment="CENTER">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="2.0" />
+               </HBox.margin>
+            </StackPane>
+            <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="61.0">
+               <center>
+                  <Slider majorTickUnit="20.0" max="150.0" min="10.0" minorTickCount="5" orientation="VERTICAL" prefHeight="314.0" prefWidth="74.0" showTickLabels="true" showTickMarks="true" styleClass="dark-blue" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="328.0" prefWidth="956.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea layoutX="277.0" layoutY="77.0" prefHeight="38.0" prefWidth="560.0" wrapText="true" />
+            <TextArea layoutX="276.0" layoutY="147.0" prefHeight="30.0" prefWidth="560.0" />
+            <TextArea layoutX="276.0" layoutY="215.0" prefHeight="33.0" prefWidth="557.0" />
+            <ComboBox layoutX="15.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="134.0" promptText="Instrument" styleClass="instrument" />
+            <Label layoutX="188.0" layoutY="82.0" prefHeight="38.0" prefWidth="86.0" style="-fx-font-weight: bold;" text="Rhythm 1" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="338.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="407.0" styleClass="octave" />
+            <Label layoutX="188.0" layoutY="148.0" prefHeight="38.0" prefWidth="86.0" style="-fx-font-weight: bold;" text="Rhythm 2" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="203.0" layoutY="219.0" prefHeight="38.0" prefWidth="55.0" style="-fx-font-weight: bold;" text="Record" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="927.0" layoutY="15.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" styleClass="style1" text="Help" />
+            <Button layoutX="474.0" layoutY="306.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-font-weight: bold;" styleClass="play" text="Play">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
