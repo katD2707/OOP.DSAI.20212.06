@@ -113,10 +113,14 @@
 }
 
 .background {
-	-fx-background-image: url("/application/background.png");
-	-fx-background-size: 100% 90%;
+	-fx-background-image: url("/piano/picture/background.png");
+	-fx-background-size: 100% 100%;
 }
 
+.black-key {
+	-fx-background-image: url("/piano/picture/blackKey.png");
+	-fx-background-size: 100% 100%;
+}
 
 .play {
     -fx-background-color: 
