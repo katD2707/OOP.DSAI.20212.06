@@ -1,4 +1,4 @@
-package piano.screen;
+package piano.main;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +14,10 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
-			VBox root = (VBox)FXMLLoader.load(getClass().getResource("Pianov2.fxml"));
+			VBox root = (VBox)FXMLLoader.load(getClass().getResource("../screen/Pianov2.fxml"));
 			
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("../screen/application.css").toExternalForm());
 			
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Piano");
