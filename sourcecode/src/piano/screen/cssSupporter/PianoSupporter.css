@@ -7,7 +7,7 @@
         #9d4024,
         #d86e3a,
         radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
-    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 6,0,0,1 );
     -fx-font-weight: bold;
     -fx-font-size: 1.1em;
 }
@@ -96,7 +96,9 @@
     -fx-font-size: 12px;
     -fx-padding: 10 10 10 20;
 }
-
+// 0,0 0 5 0, 0 0 6 0, 0 0 7 0
+// linear-gradient(#ffffff 80%, #f8f8f8 85%, #e3e3e3 86%, #ffffff 100%)
+//  linear-gradient(#171717 0%, #0b0b0b 50%, 212121 100%)
 .octave {
     -fx-background-color: 
         #090a0c,
@@ -112,8 +114,38 @@
     -fx-padding: 10 20 10 20;
 }
 
-.background {
-	-fx-background-image: url("/piano/picture/background.png");
+.mainBackground {
+	-fx-background-image: url("/piano/picture/mainBackground.png");
+	-fx-background-size: 100% 100%;
+}
+
+.topBackground {
+	-fx-background-image: url("/piano/picture/drop.gif");
+	-fx-background-size: 100% 100%;
+}
+
+.bottomBackground1 {
+	-fx-background-image: url("/piano/picture/icons8-earbud-headphones-50.png");
+	-fx-background-size: 100% 100%;
+}
+
+.bottomBackground2 {
+	-fx-background-image: url("/piano/picture/icons8-soundcloud-50.png");
+	-fx-background-size: 100% 100%;
+}
+
+.bottomBackground3 {
+	-fx-background-image: url("/piano/picture/icons8-instrument-64.png");
+	-fx-background-size: 100% 100%;
+}
+
+.bottomBackground4 {
+	-fx-background-image: url("/piano/picture/icons8-grand-piano-51.png");
+	-fx-background-size: 100% 100%;
+}
+
+.style {
+	-fx-background-image: url("/piano/picture/icons8-art-64.png");
 	-fx-background-size: 100% 100%;
 }
 
@@ -136,6 +168,19 @@
     -fx-text-fill: linear-gradient(white, #d0d0d0);
     -fx-font-size: 16px;
     -fx-padding: 10 10 10 20;
+}
+
+.replay {
+	-fx-image: url("/piano/picture/icons8-replay-50.png");
+	-fx-background-size: 100% 100%;
+}
+
+
+.separator .line {
+    -fx-background-color: #393939;
+    -fx-border-color: null;
+    -fx-pref-width: 2;
+    -fx-pref-height: 2;
 }
 
 .instrument {
