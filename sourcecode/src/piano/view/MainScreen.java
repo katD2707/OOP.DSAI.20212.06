@@ -1,22 +1,21 @@
-package piano.main;
-	
+package piano.view;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-
-public class PianoScreen extends Application {
+public class MainScreen extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			
-			VBox root = (VBox)FXMLLoader.load(getClass().getResource("../screen/fxmlSupporter/Pianov2.fxml"));
+			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("../screen/fxmlSupporter/Main.fxml"));
 
 			Scene scene = new Scene(root);
-			
+
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Piano");
 			primaryStage.getIcons().add(new Image("file:src/piano/picture/icon.png"));
