@@ -290,7 +290,7 @@
                                     <Insets right="25.0" />
                                  </HBox.margin>
                               </Separator>
-                              <TextField alignment="TOP_LEFT" prefHeight="90.0" prefWidth="568.0" style="-fx-background-color: transparent;" />
+                              <TextField alignment="TOP_LEFT" editable="false" prefHeight="90.0" prefWidth="568.0" style="-fx-background-color: transparent;" />
                               <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="80.0">
                                  <HBox.margin>
                                     <Insets left="25.0" />
