@@ -40,22 +40,17 @@ public class MainScreen extends Application {
 		launch(args);
 	}
 	
-//	private void closeProgram() {
-//		Boolean answer = ConfirmBox.display("Title", "Sure you want to exit?");
-//		if (answer) {
-//			mainStage.close();
-//		}
-//	} 
-	
 	private void closeProgram() {
-		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setTitle("Confirm exit");
-		alert.setHeaderText("Please don't go :<<<");
+		Alert alert = new Alert(AlertType.NONE);
+		alert.setTitle("Exit");
+		alert.setHeaderText("Are you finish playing?");
 		alert.setContentText("Play with us <3");
+		alert.getButtonTypes().addAll(ButtonType.OK, ButtonType.FINISH);
+		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+		stage.getIcons().add(new Image("file:src/piano/picture/icons8-fire-exit-50.png"));
 		alert.showAndWait();
-//		alert.setTitle(STYLESHEET_CASPIAN);
-		if(alert.getResult() == ButtonType.CANCEL) {
+		if(alert.getResult() == ButtonType.FINISH) {
 			mainStage.close();
-		}			
+		} 
 	}
 }

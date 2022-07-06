@@ -75,21 +75,22 @@
 }
 
 
+.white-key {
+	-fx-background-color:  linear-gradient(#ffffff 85%, #f8f8f8 88%, #e3e3e3 91%, #ffffff 100%);
+	-fx-padding: 0 0 0 0;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-radius:  2 0 10 8;
+}
+
 .white-key: hover{
 	-fx-background-color:  linear-gradient(#ffffff 0%, #e0e0e0 85%, #e0e0e0 85%);
 }
 
 .white-key: pressed{
 	-fx-background-color:  linear-gradient(#ffffff 0%, #e0e0e0 85%, #e0e0e0 85%);
-	-fx-padding: 2 0 2 0;
-	-fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
-}
-
-.white-key {
-	-fx-background-color:  linear-gradient(#ffffff 85%, #f8f8f8 88%, #e3e3e3 91%, #ffffff 100%);
-	-fx-padding: 0 0 0 0;
-	-fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
-	-fx-background-radius:  2 0 10 8;
+	-fx-padding: 2 0 -2 0;
+	-fx-background-insets: 2 0 -2 0;
+	
 }
 
 
