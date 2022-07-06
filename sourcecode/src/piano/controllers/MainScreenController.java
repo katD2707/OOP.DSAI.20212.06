@@ -9,16 +9,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import piano.test.HelpScreen;
-import piano.test.PianoScreen;
 
 public class MainScreenController {
-	
-	private HelpScreen helpScreen;
-	private PianoScreen pianoScreen;
 	
     @FXML
     private Button helpButton;
@@ -28,23 +21,9 @@ public class MainScreenController {
 
     @FXML
     void helpButtonPressed(ActionEvent event) throws IOException {
-		final String HELP_FXML_FILE_PATH = "/piano/screen/fxmlSupporter/Help.fxml";
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(HELP_FXML_FILE_PATH));
-		HelpTextController helpText = new HelpTextController();
-		fxmlLoader.setController(helpText);
-		Parent root = fxmlLoader.load();	
-		
-		Scene scene = new Scene(root);
-		scene.getStylesheets().add(getClass().getResource("../screen/cssSupporter/HelpSupporter.css").toExternalForm());
-		
-		Stage primaryStage = new Stage();
-		primaryStage.setScene(scene);
-		primaryStage.setTitle("Help");
-		primaryStage.getIcons().add(new Image("file:src/piano/picture/icons8-question-mark-30.png"));
-		primaryStage.centerOnScreen();
-		
-		primaryStage.initModality(Modality.APPLICATION_MODAL);
-		primaryStage.show();
+    	HelpTextController helpController = new HelpTextController();
+    	helpController.showHelp();
+    	
     }
 
     @FXML
