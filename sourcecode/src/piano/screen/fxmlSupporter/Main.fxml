@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="792.0" styleClass="background" stylesheets="@../cssSupporter/MainSupporter.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="792.0" styleClass="background" stylesheets="@../cssSupporter/MainSupporter.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="piano.controllers.MainScreenController">
    <top>
       <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" styleClass="help" stylesheets="@../cssSupporter/MainSupporter.css" text="Help" textFill="#ff8300">
+            <Button fx:id="helpButton" mnemonicParsing="false" onAction="#helpButtonPressed" prefHeight="32.0" prefWidth="79.0" styleClass="help" stylesheets="@../cssSupporter/MainSupporter.css" text="Help" textFill="#ff8300">
                <HBox.margin>
                   <Insets right="25.0" top="25.0" />
                </HBox.margin>
@@ -25,7 +24,7 @@
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="94.0" style="-fx-background-radius: 30;" styleClass="play" text="Play" textFill="WHITE">
+            <Button fx:id="playButton" mnemonicParsing="false" onAction="#playButtonPresed" prefHeight="37.0" prefWidth="94.0" style="-fx-background-radius: 30;" styleClass="play" text="Play" textFill="WHITE">
                <HBox.margin>
                   <Insets top="210.0" />
                </HBox.margin>

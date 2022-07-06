@@ -1,4 +1,4 @@
-package piano.view;
+package piano.test;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,17 +15,12 @@ import piano.controllers.HelpTextController;
 
 public class HelpScreen extends Application {
 	
-    @FXML
-    private TextArea helpText;
-    
-    private String line;
-
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			
-			final String help_FXML_FILE_PATH = "/piano/screen/fxmlSupporter/Help.fxml";
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(help_FXML_FILE_PATH));
+			final String HELP_FXML_FILE_PATH = "/piano/screen/fxmlSupporter/Help.fxml";
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(HELP_FXML_FILE_PATH));
 			HelpTextController helpText = new HelpTextController();
 			fxmlLoader.setController(helpText);
 			Parent root = fxmlLoader.load();	
