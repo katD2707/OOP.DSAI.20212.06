@@ -765,12 +765,12 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <VBox alignment="CENTER" layoutX="548.0" layoutY="-12.0" prefHeight="242.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;" visible="false">
+                        <VBox alignment="CENTER" layoutX="548.0" layoutY="-12.0" prefHeight="242.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
                            <children>
                               <Slider blockIncrement="6.0" majorTickUnit="10.0" minorTickCount="5" orientation="VERTICAL" prefHeight="214.0" prefWidth="39.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
                            </children>
                         </VBox>
-                        <HBox alignment="TOP_CENTER" layoutX="603.0" layoutY="-12.0" prefHeight="236.0" prefWidth="345.0" spacing="10.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;" visible="false">
+                        <HBox alignment="TOP_CENTER" layoutX="603.0" layoutY="-12.0" prefHeight="236.0" prefWidth="345.0" spacing="10.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
                            <children>
                               <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" rotate="27.3">
                                  <image>
@@ -793,7 +793,7 @@
                               </ComboBox>
                            </children>
                         </HBox>
-                        <VBox alignment="TOP_RIGHT" layoutX="981.0" layoutY="-12.0" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;" visible="false">
+                        <VBox alignment="TOP_RIGHT" layoutX="981.0" layoutY="-12.0" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
                            <children>
                               <Label prefHeight="30.0" prefWidth="55.0" text="DEFAULT" textFill="WHITE">
                                  <VBox.margin>
@@ -804,7 +804,7 @@
                                  </font>
                               </Label>
                               <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-pref-height: 3; -fx-border-color: null;" />
-                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="     SELECT INSTRUMENT" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
+                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="SELECT SONG" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
@@ -824,7 +824,7 @@
                                  </font>
                               </Label>
                               <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-border-color: null; -fx-pref-height: 3;" />
-                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="     SELECT INSTRUMENT" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
+                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="SELECT SONG" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
