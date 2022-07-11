@@ -1,0 +1,107 @@
+.mainBackground {
+	-fx-background-image: url("/piano/picture/mainBackground.png");
+	-fx-background-size: 100% 100%;
+}
+
+.topBackground {
+	-fx-background-image: url("/piano/picture/drop.gif");
+	-fx-background-size: 100% 100%;
+}
+
+.separator .line {
+    -fx-background-color: #393939;
+    -fx-border-color: null;
+    -fx-pref-width: 2;
+    -fx-pref-height: 2;
+}
+
+.help {
+	-fx-background-radius:  20;
+	-fx-border-color:  #ff8300;      
+						
+	-fx-background-color:  black;
+	-fx-effect:  dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-border-radius:  20;
+	-fx-border-width:  1.5;
+	-fx-text-fill: #ff8300;
+}
+
+.help: hover{
+	-fx-background-color:  #ff8300;
+	-fx-text-fill: black;
+}
+
+.help: pressed{
+	-fx-background-color:  #ff8300;
+	-fx-text-fill: black;
+}
+
+.animation: hover {
+	-fx-text-fill: white;
+	-fx-effect:  dropshadow( one-pass-box , rgba(255,255,255,1) , 10,0,2,2 );
+}
+
+.animation: pressed {
+	-fx-text-fill: white;
+	-fx-effect:  dropshadow( gaussian , rgba(255,255,255,1) , 10,0,2,2 );
+}
+
+.slider .thumb {
+    -fx-background-image :url("/piano/picture/icons8-jake-48.png");   
+    -fx-background-size: 100% 100%;
+    -fx-pref-height: 20;
+    -fx-pref-width: 20;
+}
+
+
+.slider .axis { 
+	-fx-tick-label-fill: white; 
+	-fx-tick-mark-fill: white;
+}
+
+.combo-box-base .text{
+    -fx-fill: rgb(255.0, 255.0, 255.0);
+    -fx-font-weight: bold;
+}
+
+.combo-box-base .list-cell {
+	-fx-background-color:  linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%);
+}
+
+.combo-box .list-view {
+	-fx-background-color:  linear-gradient(#535353 0%,#0b0b0b 100%);
+	-fx-font-weight: bold;
+	-fx-fill: rgb(255.0, 255.0, 255.0);
+}
+
+
+.white-key {
+	-fx-background-color:  linear-gradient(#ffffff 85%, #f8f8f8 88%, #e3e3e3 91%, #ffffff 100%);
+	-fx-padding: 0 0 0 0;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-radius:  2 0 10 8;
+}
+
+.white-key: hover{
+	-fx-background-color:  linear-gradient(#ffffff 0%, #e0e0e0 85%, #e0e0e0 85%);
+}
+
+.white-key: pressed{
+	-fx-background-color:  linear-gradient(#ffffff 0%, #e0e0e0 85%, #e0e0e0 85%);
+	-fx-padding: 2 0 -2 0;
+	-fx-background-insets: 2 0 -2 0;
+	
+}
+
+
+.black-key {
+	-fx-background-image: url("/piano/picture/blackKey.png");
+	-fx-background-size: 100% 100%;
+}
+
+.black-key: pressed{
+	-fx-background-insets: 0,0 0 7 0, 0 0 8 0, 0 0 9 0;
+	-fx-border-color: #ff8300;
+	-fx-border-width: 2;
+
+}

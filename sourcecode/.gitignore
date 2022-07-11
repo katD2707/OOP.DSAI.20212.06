@@ -1,4 +1,7 @@
 /bin/
 .project
 .classpath
-.settings
+/.settings/
+build.fxbuild
+hs_err_pid5472.log
+replay_pid5472.log
