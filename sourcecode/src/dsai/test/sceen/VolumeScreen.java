@@ -1,7 +1,7 @@
 package dsai.test.sceen;
 
 import dsai.piano.controller.VolumeController;
-import dsai.piano.model.Volume;
+import dsai.piano.model.component.Volume;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +14,7 @@ public class VolumeScreen extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		final String VOLUME_FXML_FILE_PATH = "/dsai/piano/view/Volume.fxml";
+		final String VOLUME_FXML_FILE_PATH = "/dsai/piano/screen/view/Volume.fxml";
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(VOLUME_FXML_FILE_PATH));
 		VolumeController volumeController = new VolumeController(volume);
 		fxmlLoader.setController(volumeController);

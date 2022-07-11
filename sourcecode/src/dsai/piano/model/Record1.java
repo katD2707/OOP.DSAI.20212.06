@@ -2,7 +2,9 @@ package dsai.piano.model;
 
 import java.util.ArrayList;
 
-public class Record implements Playable {
+import dsai.piano.model.component.pianoNote;
+
+public class Record1 implements Playable {
 	private ArrayList<pianoNote> record;
 	@Override
 	public void play() {
@@ -10,7 +12,7 @@ public class Record implements Playable {
 		
 	}
 	
-	public Record() {
+	public Record1() {
 	}
 	public ArrayList<pianoNote> getRecord() {
 		return this.record;

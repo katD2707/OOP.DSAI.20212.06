@@ -1,8 +1,11 @@
-package dsai.piano.model;
+package dsai.piano.model.component;
 
+import javax.sound.midi.MidiUnavailableException;
+
+import org.jfugue.realtime.RealtimePlayer;
 import org.jfugue.theory.Note;
 
-public class pianoNote extends Note implements Playable {
+public class pianoNote extends Note {
 	private String keyChar;
 	
 	public pianoNote() {
@@ -29,7 +32,11 @@ public class pianoNote extends Note implements Playable {
 	public String getKeyChar() {
 		return this.keyChar;
 	}
-	
+	public void setOctave(int i) {
+		if (i > 0 && i < 10) {
+			this.setValue( (byte) ((byte) (this.getValue()) % 12 + i * 12));
+		}
+	}
 	public void increaseOctave() {
 		if (this.getOctave() < 9) {
 			this.changeValue(12);
@@ -41,25 +48,30 @@ public class pianoNote extends Note implements Playable {
 		} 
 	}
 	
-	
-	
-	@Override
-	public void play() {
-		// TODO Auto-generated method stub
+	public String toString() {
+		return "Piano Note: " + this.getOriginalString() + ", Key String: " + this.getKeyChar();
 	}
-	public static void main(String[] args) {
+	
+//	@Override
+//	public void play() {
+//		// TODO Auto-generated method stub
+//	}
+	public static void main(String[] args) throws MidiUnavailableException {
 		pianoNote note = new pianoNote("D#3");
 //		System.out.println(note.getValue());
 //		System.out.println();
 		note.setValue((byte) 72);
 //		System.out.println(note.getOctave());
 		
-		pianoNote note2 = new pianoNote("C#9");
+		pianoNote note2 = new pianoNote("C#2");
 		System.out.println(note2.getOctave());
 //		System.out.println(note2.increaseOctave());
 		note2.increaseOctave();
 		System.out.println(note2.getOctave());
 		System.out.println(note2.getValue());
+		RealtimePlayer player = new RealtimePlayer();
+		player.startNote(note2);
+		System.out.println(( ((int)(byte)49) % 12 + 12 * 4));
 		
 	}
 }

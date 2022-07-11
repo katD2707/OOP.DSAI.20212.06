@@ -10,6 +10,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import javax.sound.midi.MidiUnavailableException;
 import javax.swing.JButton;
@@ -21,12 +22,12 @@ import dsai.piano.model.Piano;
 
 public class pianoTest extends JFrame {
 	private Piano piano;
-	private Map<String, JLabel> map;
+	private Map<String, JButton> map;
 	
 	public void BuildGUI() throws MidiUnavailableException {
 		this.piano = new Piano();
-		this.map = new HashMap<String, JLabel>();
-		
+		this.map = new HashMap<String, JButton>();
+		piano.getPlayer().changeInstrument(40);
 		
 		
 		this.setLayout(new GridLayout(2, 1));
@@ -42,13 +43,13 @@ public class pianoTest extends JFrame {
 
 		for (int i = 0; i< 12; i++) {
 			String keyStr = this.piano.getPianoNotes().get(i).getKeyChar();
-			JLabel btn = new JLabel(this.piano.getPianoNotes().get(i).getOriginalString());
+			JButton btn = new JButton(this.piano.getPianoNotes().get(i).getOriginalString());
 			map.put(keyStr, btn);
 			panel.add(btn);
-			
-//			btn.addActionListener(evt -> {
-//				this.piano.getPlayer().startNote(this.piano.getNotesMap().get(keyStr));
-//			});
+			btn.setFocusable(false);
+			btn.addActionListener(evt -> {
+				this.piano.getPlayer().startNote(this.piano.getNotesMap().get(keyStr));
+			});
 		}
 		
 		JPanel panel1 = new JPanel(new GridLayout(2,1));
@@ -135,6 +136,10 @@ public class pianoTest extends JFrame {
 				// TODO Auto-generated method stub
 				if ("ASDFGHJTYUWE".contains(("" + e.getKeyChar()))){
 					piano.enableKeys[piano.getPianoNotes().indexOf(piano.getNotesMap().get("" + e.getKeyChar()))] = true;
+					// stop node
+					piano.getPlayer().stopNote(piano.getNotesMap().get("" + e.getKeyChar()));
+					
+					
 					map.get("" + e.getKeyChar()).setText(piano.getNotesMap().get("" + e.getKeyChar()).originalString);
 					map.get("" + e.getKeyChar()).setForeground(Color.BLACK);
 				}

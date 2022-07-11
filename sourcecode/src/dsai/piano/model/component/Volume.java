@@ -1,4 +1,4 @@
-package dsai.piano.model;
+package dsai.piano.model.component;
 
 public class Volume {
 	private int value = 50;

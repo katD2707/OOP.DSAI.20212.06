@@ -1,6 +1,6 @@
 package dsai.piano.controller;
 
-import dsai.piano.model.Volume;
+import dsai.piano.model.component.Volume;
 import javafx.beans.InvalidationListener;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
