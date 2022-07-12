@@ -2,7 +2,9 @@ package dsai.piano.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.sound.midi.MidiUnavailableException;
 
@@ -12,6 +14,7 @@ import org.jfugue.realtime.RealtimePlayer;
 import dsai.piano.model.component.Volume;
 import dsai.piano.model.component.pianoNote;
 import dsai.piano.model.instrument.Instrument;
+import dsai.piano.model.instrument.Piano;
 import dsai.piano.model.record.Record;
 
 public class piano2 extends RealtimePlayer {
@@ -19,8 +22,9 @@ public class piano2 extends RealtimePlayer {
 	private Volume volume;
 	private Map<String, pianoNote> notesMap;
 	boolean[] enableKeys;
+	private int nbPianoNotes = 0;
 	private ArrayList<Record> records;
-	private Instrument instrument;
+	private Instrument instrument = new Piano();
 	
 	public piano2() throws MidiUnavailableException {
 		super();
@@ -45,30 +49,57 @@ public class piano2 extends RealtimePlayer {
 //		this.pianoNotes = new ArrayList<pianoNote>();
 		this.notesMap = new HashMap<String, pianoNote>();
 		this.records = new ArrayList<Record>();
-		pianoNote noteC = new pianoNote("C", "A");
-		this.addPianoNote(noteC);
-		pianoNote noteCD = new pianoNote("C#", "W");
-		this.addPianoNote(noteCD);
-		pianoNote noteD = new pianoNote("D", "S");
-		this.addPianoNote(noteD);
-		pianoNote noteDE = new pianoNote("D#", "E");
-		this.addPianoNote(noteDE);
-		pianoNote noteE = new pianoNote("E", "D");
-		this.addPianoNote(noteE);
-		pianoNote noteF = new pianoNote("F", "F");
-		this.addPianoNote(noteF);
-		pianoNote noteFG = new pianoNote("F#", "T");
-		this.addPianoNote(noteFG);
-		pianoNote noteG = new pianoNote("G", "G");
-		this.addPianoNote(noteG);
-		pianoNote noteGA = new pianoNote("G#", "Y");
-		this.addPianoNote(noteGA);
-		pianoNote noteA = new pianoNote("A", "H");
-		this.addPianoNote(noteA);
-		pianoNote noteAB = new pianoNote("A#", "U");
-		this.addPianoNote(noteAB);
-		pianoNote noteB = new pianoNote("B", "J");
-		this.addPianoNote(noteB);
+		Map<String, String> keyMap = new HashMap<String, String>();
+		keyMap.put("C", "A");
+		keyMap.put("C#", "W");
+		keyMap.put("D", "S");
+		keyMap.put("D#", "E");
+		keyMap.put("E", "D");
+		keyMap.put("F", "F");
+		keyMap.put("F#", "T");
+		keyMap.put("G", "G");
+		keyMap.put("G#", "Y");
+		keyMap.put("A", "H");
+		keyMap.put("A#", "U");
+		keyMap.put("B", "J");
+//		keyMap.put();
+//		keyMap.put();
+//		keyMap.put();
+//		keyMap.put();
+//		keyMap.put();
+		
+//		Iterator<String> iterator = keyMap.ite
+		for (Entry<String, String> key: keyMap.entrySet()) {
+			System.out.println(key);
+			pianoNote note = new pianoNote(key.getKey(), nbPianoNotes++, key.getValue());
+			this.addPianoNote(note);
+//			nbPianoNotes++;
+		}
+		System.out.println("done");
+//		pianoNote noteC = new pianoNote("C", "A");
+//		this.addPianoNote(noteC);
+//		pianoNote noteCD = new pianoNote("C#", "W");
+//		this.addPianoNote(noteCD);
+//		pianoNote noteD = new pianoNote("D", "S");
+//		this.addPianoNote(noteD);
+//		pianoNote noteDE = new pianoNote("D#", "E");
+//		this.addPianoNote(noteDE);
+//		pianoNote noteE = new pianoNote("E", "D");
+//		this.addPianoNote(noteE);
+//		pianoNote noteF = new pianoNote("F", "F");
+//		this.addPianoNote(noteF);
+//		pianoNote noteFG = new pianoNote("F#", "T");
+//		this.addPianoNote(noteFG);
+//		pianoNote noteG = new pianoNote("G", "G");
+//		this.addPianoNote(noteG);
+//		pianoNote noteGA = new pianoNote("G#", "Y");
+//		this.addPianoNote(noteGA);
+//		pianoNote noteA = new pianoNote("A", "H");
+//		this.addPianoNote(noteA);
+//		pianoNote noteAB = new pianoNote("A#", "U");
+//		this.addPianoNote(noteAB);
+//		pianoNote noteB = new pianoNote("B", "J");
+//		this.addPianoNote(noteB);
 	
 		enableKeys = new boolean[12];
 		for (int i = 0; i < 12; i++) {

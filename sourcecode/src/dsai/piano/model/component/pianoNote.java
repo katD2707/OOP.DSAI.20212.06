@@ -7,44 +7,64 @@ import org.jfugue.theory.Note;
 
 public class pianoNote extends Note {
 	private String keyChar;
-	
+	private final int id;
+	private int octave;
 	public pianoNote() {
 		super();
+		this.id = -1;
 	}
 	
 	public pianoNote(String note) {
 		super(note);
+		this.id = -1;
 	}
 	
 	public pianoNote(String note, String keyChar) {
 		super(note);
 		this.keyChar = keyChar;
+		this.id = -1;
 	}
 	
-//	public void setVolume(Volume volume) {
-//		this.volume = volume;
-//	}
+	public pianoNote(String note, int id) {
+		super(note);
+		this.id = id;
+	}
+	public pianoNote(String note, int id, String keyChar, int octave) {
+		super(note);
+		this.id = id;
+		this.keyChar = keyChar;
+		this.setOctave(octave);
+	}
+	public pianoNote(String note, int id, String keyChar) {
+		super(note);
+		this.id = id;
+		this.keyChar = keyChar;
+	}
 	
-//	public void setOctave(Octave octave) {
-//		this.octave = octave;
-//	}
-
+	
+	public int getId() {
+		return this.id;
+	}
+	
 	public String getKeyChar() {
 		return this.keyChar;
 	}
 	public void setOctave(int i) {
 		if (i > 0 && i < 10) {
+			this.octave = i;
 			this.setValue( (byte) ((byte) (this.getValue()) % 12 + i * 12));
 		}
 	}
 	public void increaseOctave() {
 		if (this.getOctave() < 9) {
 			this.changeValue(12);
+			this.octave++;
 		}
 	}
 	public void decreaseOctave() {
 		if (this.getOctave() > 0) {
 			this.changeValue(-12);
+			this.octave--;
 		} 
 	}
 	
