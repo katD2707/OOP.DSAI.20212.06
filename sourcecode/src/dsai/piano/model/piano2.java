@@ -1,8 +1,6 @@
 package dsai.piano.model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -16,6 +14,8 @@ import dsai.piano.model.component.pianoNote;
 import dsai.piano.model.instrument.Instrument;
 import dsai.piano.model.instrument.Piano;
 import dsai.piano.model.record.Record;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class piano2 extends RealtimePlayer {
 	
@@ -23,7 +23,7 @@ public class piano2 extends RealtimePlayer {
 	private Map<String, pianoNote> notesMap;
 	boolean[] enableKeys;
 	private int nbPianoNotes = 0;
-	private ArrayList<Record> records;
+	private ObservableList<Record> records = FXCollections.observableArrayList();;
 	private Instrument instrument = new Piano();
 	
 	public piano2() throws MidiUnavailableException {
@@ -48,20 +48,47 @@ public class piano2 extends RealtimePlayer {
 		this.volume = volume;
 //		this.pianoNotes = new ArrayList<pianoNote>();
 		this.notesMap = new HashMap<String, pianoNote>();
-		this.records = new ArrayList<Record>();
+//		this.records = new ArrayList<Record>();
+//		this.records = new ObservableList<Record>();
 		Map<String, String> keyMap = new HashMap<String, String>();
 		keyMap.put("C", "A");
-		keyMap.put("C#", "W");
 		keyMap.put("D", "S");
-		keyMap.put("D#", "E");
 		keyMap.put("E", "D");
 		keyMap.put("F", "F");
-		keyMap.put("F#", "T");
 		keyMap.put("G", "G");
-		keyMap.put("G#", "Y");
 		keyMap.put("A", "H");
-		keyMap.put("A#", "U");
 		keyMap.put("B", "J");
+		keyMap.put("C#", "6");
+		keyMap.put("D#", "7");
+		keyMap.put("F#", "8");
+		keyMap.put("G#", "9");
+		keyMap.put("A#", "0");
+		
+		keyMap.put("C4", "Q");
+		keyMap.put("D4", "W");
+		keyMap.put("E4", "E");
+		keyMap.put("F4", "R");
+		keyMap.put("G4", "T");
+		keyMap.put("A4", "Y");
+		keyMap.put("B4", "U");
+		keyMap.put("C#4", "1");
+		keyMap.put("D#4", "2");
+		keyMap.put("F#4", "3");
+		keyMap.put("G#4", "4");
+		keyMap.put("A#4", "5");
+		
+		keyMap.put("C6", "Z");
+		keyMap.put("D6", "X");
+		keyMap.put("E6", "C");
+		keyMap.put("F6", "V");
+		keyMap.put("G6", "B");
+		keyMap.put("A6", "N");
+		keyMap.put("B6", "M");
+		keyMap.put("C#6", "I");
+		keyMap.put("D#6", "O");
+		keyMap.put("F#6", "P");
+		keyMap.put("G#6", "K");
+		keyMap.put("A#6", "L");
 //		keyMap.put();
 //		keyMap.put();
 //		keyMap.put();
@@ -152,7 +179,7 @@ public class piano2 extends RealtimePlayer {
 		
 	}
 	
-	public ArrayList<Record> getRecords() {
+	public ObservableList<Record> getRecords() {
 		return this.records;
 	}
 	
@@ -183,7 +210,13 @@ public class piano2 extends RealtimePlayer {
 	public void addRecord(String name, String recordStr) {
 		this.records.add(new Record(recordStr));
 	}
-
+	public void removeRecord(Record record) {
+		if (this.getRecords().contains(record)) {
+			this.records.remove(record);
+		} else {
+			System.out.println("not in piano record");
+		}
+	}
 //	public void play(pianoNote note) {
 //		this.startNote(note);
 //	}

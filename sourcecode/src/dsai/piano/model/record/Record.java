@@ -38,7 +38,7 @@ public class Record {
 	}
 
 	public int getLength() {
-		return (this.pattern.toString().split(" ")).length;
+		return (this.pattern.toString().trim().split("\\s+|,\\s*|\\.\\s*|\\?\\s*")).length;
 	}
 	
 	public void addContent(String content) {
@@ -52,9 +52,9 @@ public class Record {
 	
 	
 	
-//	public static void main(String[] args) {
-//		Record rc = new Record();
-//		rc.setPattern("acd dkv");
-//		System.out.println(rc.getLength());
-//	}
+	public static void main(String[] args) {
+		Record rc = new Record();
+		rc.setPattern("  acd dkv  ");
+		System.out.println(rc.getLength());
+	}
 }

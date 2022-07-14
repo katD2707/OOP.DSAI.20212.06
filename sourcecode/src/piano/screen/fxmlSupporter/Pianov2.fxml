@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -282,13 +283,13 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="95.0" prefWidth="123.0">
                                  <children>
-                                    <TextField alignment="CENTER" editable="false" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: #ff8300;" text="Play">
+                                    <TextField alignment="CENTER" editable="false" focusTraversable="false" onAction="#a" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: #ff8300;" text="Play">
                                        <font>
                                           <Font name="System Bold" size="21.0" />
                                        </font>
                                     </TextField>
                                     <Separator maxWidth="-Infinity" prefHeight="5.0" prefWidth="70.0" />
-                                    <TextField alignment="CENTER" editable="false" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: #ff8300;" text="Key" VBox.vgrow="ALWAYS">
+                                    <TextField alignment="CENTER" editable="false" focusTraversable="false" onAction="#b" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: #ff8300;" text="Key" VBox.vgrow="ALWAYS">
                                        <font>
                                           <Font name="System Bold" size="21.0" />
                                        </font>
@@ -302,7 +303,7 @@
                               </Separator>
                               <VBox prefHeight="93.0" prefWidth="571.0">
                                  <children>
-                                    <TextField fx:id="keyLabel" alignment="TOP_LEFT" editable="false" prefHeight="36.0" prefWidth="568.0" style="-fx-background-color: white;">
+                                    <TextField fx:id="keyLabel" alignment="TOP_LEFT" editable="false" focusTraversable="false" prefHeight="36.0" prefWidth="568.0" style="-fx-background-color: white;">
                                        <padding>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </padding>
@@ -326,7 +327,7 @@
                                                 <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                              </padding>
                                           </Label>
-                                          <TextField fx:id="titleLabel" focusTraversable="false" prefHeight="40.0" prefWidth="400.0" promptText="Viet lien khong cach ">
+                                          <TextField fx:id="titleLabel" focusTraversable="false" prefHeight="40.0" prefWidth="400.0" promptText="Viet lien khong cach " HBox.hgrow="NEVER">
                                              <HBox.margin>
                                                 <Insets bottom="10.0" left="10.0" top="10.0" />
                                              </HBox.margin>
@@ -360,7 +361,7 @@
                                                 <Image url="@../../picture/icons8-rotate-100.png" />
                                              </image>
                                           </ImageView>
-                                          <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="49.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
+                                          <Button mnemonicParsing="false" onMouseClicked="#replayPatternClicked" prefHeight="47.0" prefWidth="49.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
                                              <tooltip>
                                                 <Tooltip text="Replay">
                                                    <font>
@@ -378,7 +379,7 @@
                                                 <Image url="@../../picture/icons8-replay-10-100.png" />
                                              </image>
                                           </ImageView>
-                                          <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
+                                          <Button mnemonicParsing="false" onMouseClicked="#a" prefHeight="34.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
                                              <tooltip>
                                                 <Tooltip text="Back 10s">
                                                    <font>
@@ -396,7 +397,7 @@
                                                 <Image url="@../../picture/icons8-pencil-64.png" />
                                              </image>
                                           </ImageView>
-                                          <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="29.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent;" text="Button">
+                                          <Button mnemonicParsing="false" onMouseClicked="#b" prefHeight="26.0" prefWidth="29.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent;" text="Button">
                                              <tooltip>
                                                 <Tooltip text="Edit">
                                                    <font>
@@ -414,7 +415,7 @@
                                                 <Image url="@../../picture/icons8-beson-64.png" />
                                              </image>
                                           </ImageView>
-                                          <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
+                                          <Button mnemonicParsing="false" onMouseClicked="#clearPatternClicked" prefHeight="38.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
                                              <tooltip>
                                                 <Tooltip text="Clear">
                                                    <font>
@@ -458,7 +459,7 @@
                                     <Image url="@../../picture/icons8-record-64.png" />
                                  </image>
                               </ImageView>
-                              <Label onMouseClicked="#startRecord" styleClass="animation" text="RECORD" textFill="#939393">
+                              <Label fx:id="recordLabel" onMouseClicked="#recordLabelClicked" styleClass="animation" text="RECORD" textFill="#939393">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
@@ -481,7 +482,7 @@
                                     <Insets bottom="3.0" />
                                  </HBox.margin>
                               </ImageView>
-                              <Label fx:id="assitantLabel" alignment="CENTER" onMouseClicked="#AssistantClicked" styleClass="animation" text="KEY ASSISTANT" textFill="#939393">
+                              <Label alignment="CENTER" onMouseClicked="#assistantClicked" styleClass="animation" text="KEY ASSISTANT" textFill="#939393">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
@@ -510,7 +511,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="34.0" prefWidth="135.0" spacing="5.0">
                            <children>
-                              <ImageView fitHeight="36.0" fitWidth="31.0" onMouseClicked="#startRecord" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../picture/icons8-art-64.png" />
                                  </image>
@@ -566,7 +567,7 @@
                   </TilePane>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C2">
+                        <Button fx:id="btnQ" alignment="BOTTOM_CENTER" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C4">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -574,7 +575,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnA" alignment="BOTTOM_CENTER" layoutX="738.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A5 (H)">
+                        <Button fx:id="btnH" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="738.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A5">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -582,7 +583,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnG" alignment="BOTTOM_CENTER" layoutX="676.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G5 (G)">
+                        <Button fx:id="btnG" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="676.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G5">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -590,7 +591,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="123.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E2">
+                        <Button fx:id="btnE" alignment="BOTTOM_CENTER" layoutX="123.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E4">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -598,7 +599,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="369.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B2">
+                        <Button fx:id="btnU" alignment="BOTTOM_CENTER" layoutX="369.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B4">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -606,7 +607,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="246.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G2">
+                        <Button fx:id="btnT" alignment="BOTTOM_CENTER" layoutX="246.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G4">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -614,7 +615,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnF" alignment="BOTTOM_CENTER" layoutX="615.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F5 (F)">
+                        <Button fx:id="btnF" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="615.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F5">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -622,7 +623,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnE" alignment="BOTTOM_CENTER" layoutX="553.5" mnemonicParsing="false" onAction="#a" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" onMousePressed="#btnMousePressed" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E5 (D)">
+                        <Button fx:id="btnD" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="553.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E5">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -630,7 +631,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnD" alignment="BOTTOM_CENTER" layoutX="492.0" mnemonicParsing="false" onAction="#a" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" onMousePressed="#btnMousePressed" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D5 (S)" textAlignment="CENTER">
+                        <Button fx:id="btnS" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="492.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D5" textAlignment="CENTER">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -638,7 +639,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnC" alignment="BOTTOM_CENTER" layoutX="430.5" mnemonicParsing="false" onAction="#a" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" onMousePressed="#btnMousePressed" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C5 (A)">
+                        <Button fx:id="btnA" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="430.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C5">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -646,7 +647,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="307.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A2">
+                        <Button fx:id="btnY" alignment="BOTTOM_CENTER" layoutX="307.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A4">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -654,7 +655,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="184.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F2">
+                        <Button fx:id="btnR" alignment="BOTTOM_CENTER" layoutX="184.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F4">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -662,7 +663,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="61.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D2">
+                        <Button fx:id="btnW" alignment="BOTTOM_CENTER" layoutX="61.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D4">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -670,7 +671,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="984.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E4">
+                        <Button fx:id="btnC" alignment="BOTTOM_CENTER" layoutX="984.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E6">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -678,7 +679,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="1230.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B4">
+                        <Button fx:id="btnM" alignment="BOTTOM_CENTER" layoutX="1230.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B6">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -686,7 +687,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="1168.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A4">
+                        <Button fx:id="btnN" alignment="BOTTOM_CENTER" layoutX="1168.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A6">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -694,7 +695,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="1107.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G4">
+                        <Button fx:id="btnB" alignment="BOTTOM_CENTER" layoutX="1107.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G6">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -702,7 +703,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="1045.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F4">
+                        <Button fx:id="btnV" alignment="BOTTOM_CENTER" layoutX="1045.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F6">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -710,7 +711,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="922.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D4">
+                        <Button fx:id="btnX" alignment="BOTTOM_CENTER" layoutX="922.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D6">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -718,7 +719,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="BOTTOM_CENTER" layoutX="861.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C4">
+                        <Button fx:id="btnZ" alignment="BOTTOM_CENTER" layoutX="861.0" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C6">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -726,7 +727,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnB" alignment="BOTTOM_CENTER" layoutX="799.5" mnemonicParsing="false" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B5 (J)">
+                        <Button fx:id="btnJ" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="799.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B5">
                            <padding>
                               <Insets bottom="80.0" />
                            </padding>
@@ -734,77 +735,77 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="40.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#" textFill="WHITE">
+                        <Button fx:id="btn1" alignment="CENTER" layoutX="40.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="286.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#" textFill="WHITE">
+                        <Button fx:id="btn4" alignment="CENTER" layoutX="286.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="226.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#" textFill="WHITE">
+                        <Button fx:id="btn3" alignment="CENTER" layoutX="226.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="101.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#" textFill="WHITE">
+                        <Button fx:id="btn2" alignment="CENTER" layoutX="101.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnCd" alignment="CENTER" layoutX="471.0" mnemonicParsing="false" onAction="#a" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" onMousePressed="#btnMousePressed" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#5 (W)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btn6" alignment="CENTER" layoutX="471.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="348.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#" textFill="WHITE">
+                        <Button fx:id="btn5" alignment="CENTER" layoutX="348.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="1209.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#" textFill="WHITE">
+                        <Button fx:id="btnL" alignment="CENTER" layoutX="1209.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="1147.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#" textFill="WHITE">
+                        <Button fx:id="btnK" alignment="CENTER" layoutX="1147.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="1086.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#" textFill="WHITE">
+                        <Button fx:id="btnP" alignment="CENTER" layoutX="1086.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="963.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#" textFill="WHITE">
+                        <Button fx:id="btnO" alignment="CENTER" layoutX="963.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" layoutX="901.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#" textFill="WHITE">
+                        <Button fx:id="btnI" alignment="CENTER" layoutX="901.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnAb" alignment="CENTER" layoutX="778.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A# (U)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btn0" alignment="CENTER" focusTraversable="false" layoutX="778.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnGa" alignment="CENTER" layoutX="716.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G# (Y)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btn9" alignment="CENTER" focusTraversable="false" layoutX="716.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnFg" alignment="CENTER" layoutX="657.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F# (T)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btn8" alignment="CENTER" focusTraversable="false" layoutX="657.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnde" alignment="CENTER" layoutX="532.0" mnemonicParsing="false" onAction="#a" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" onMousePressed="#btnMousePressed" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#5 (E)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btn7" alignment="CENTER" focusTraversable="false" layoutX="532.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold" size="11.0" />
                            </font>
@@ -852,7 +853,7 @@
                         </HBox>
                         <VBox fx:id="songBox" alignment="TOP_RIGHT" layoutX="981.0" layoutY="-12.0" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;" visible="false">
                            <children>
-                              <Label prefHeight="30.0" prefWidth="55.0" text="DEFAULT" textFill="WHITE">
+                              <Label prefHeight="30.0" prefWidth="55.0" text="RECORD" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets right="230.0" top="20.0" />
                                  </VBox.margin>
@@ -861,7 +862,7 @@
                                  </font>
                               </Label>
                               <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-pref-height: 3; -fx-border-color: null;" />
-                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="     SELECT INSTRUMENT" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
+                              <ComboBox fx:id="recordCombobox" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="Your Record" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base" visibleRowCount="4">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
@@ -872,26 +873,33 @@
                                     <Insets left="30.0" right="30.0" top="10.0" />
                                  </VBox.margin>
                               </ComboBox>
-                              <Label prefHeight="26.0" prefWidth="56.0" text="MY SONG" textFill="WHITE">
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="300.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnPlayRecord" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#btnPlayRecordPressed" prefWidth="60.0" text="Play">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnRemoveRecord" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#btnRemoveRecordPressed" prefWidth="60.0" text="Remove" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
                                  <VBox.margin>
-                                    <Insets right="230.0" top="20.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
+                              </HBox>
                               <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-border-color: null; -fx-pref-height: 3;" />
-                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="     SELECT INSTRUMENT" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                                 <VBox.margin>
-                                    <Insets left="30.0" right="30.0" top="10.0" />
-                                 </VBox.margin>
-                              </ComboBox>
                            </children>
                         </VBox>
                      </children>
