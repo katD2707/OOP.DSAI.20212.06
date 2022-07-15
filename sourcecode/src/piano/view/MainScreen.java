@@ -16,7 +16,7 @@ public class MainScreen extends Application {
 	@Override
 	public void start(Stage mainStage) throws Exception {
 		this.mainStage = mainStage;
-		final String MAIN_FXML_FILE_PATH = "/piano/screen/fxmlSupporter/Main.fxml";
+		final String MAIN_FXML_FILE_PATH = "/dsai/piano/screen/fxmlSupporter/Main.fxml";
 		Parent root = FXMLLoader.load(getClass().getResource(MAIN_FXML_FILE_PATH));
 		
 		
@@ -24,7 +24,7 @@ public class MainScreen extends Application {
 		
 		mainStage.setScene(scene);
 		mainStage.setTitle("Piano");
-		mainStage.getIcons().add(new Image("file:src/piano/picture/icon.png"));
+		mainStage.getIcons().add(new Image("file:src/dsai/piano/screen/picture/icon.png"));
 		mainStage.setResizable(false);
 		mainStage.centerOnScreen();
 		
@@ -45,9 +45,9 @@ public class MainScreen extends Application {
 		alert.setTitle("Exit");
 		alert.setHeaderText("Are you finish playing?");
 		alert.setContentText("Play with us <3");
-		alert.getButtonTypes().addAll(ButtonType.OK, ButtonType.FINISH);
+		alert.getButtonTypes().addAll(ButtonType.CANCEL, ButtonType.FINISH);
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-		stage.getIcons().add(new Image("file:src/piano/picture/icons8-fire-exit-50.png"));
+		stage.getIcons().add(new Image("file:src/dsai/piano/screen/picture/icons8-fire-exit-50.png"));
 		alert.showAndWait();
 		if(alert.getResult() == ButtonType.FINISH) {
 			mainStage.close();
