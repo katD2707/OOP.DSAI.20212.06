@@ -10,7 +10,7 @@ import dsai.piano.model.instrument.Piano;
 import dsai.piano.model.instrument.Trumpet;
 import dsai.piano.model.instrument.Violin;
 import dsai.piano.model.record.Record;
-import dsai.piano.tool.BidirectionalMap;
+import dsai.piano.model.tool.BidirectionalMap;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

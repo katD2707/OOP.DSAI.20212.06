@@ -22,7 +22,7 @@ public class VirtualPianoViewVer2 extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
-  		final String PATH = "/piano/screen/fxmlSupporter/Pianov2.fxml"; 
+  		final String PATH = "/dsai/piano/screen/fxmlSupporter/Pianov2.fxml"; 
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(PATH));
 		VirtualPianoVer2Controller controller = new VirtualPianoVer2Controller(piano);
 		fxmlLoader.setController(controller);

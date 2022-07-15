@@ -358,7 +358,7 @@
                                        <children>
                                           <ImageView fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../picture/icons8-rotate-100.png" />
+                                                <Image url="@../picture/icons8-rotate-100.png" />
                                              </image>
                                           </ImageView>
                                           <Button mnemonicParsing="false" onMouseClicked="#replayPatternClicked" prefHeight="47.0" prefWidth="49.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
@@ -376,7 +376,7 @@
                                        <children>
                                           <ImageView fitHeight="43.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../picture/icons8-replay-10-100.png" />
+                                                <Image url="@../picture/icons8-replay-10-100.png" />
                                              </image>
                                           </ImageView>
                                           <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#decreaseOctaveBtnClicked" prefHeight="34.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
@@ -394,7 +394,7 @@
                                        <children>
                                           <ImageView fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../picture/icons8-pencil-64.png" />
+                                                <Image url="@../picture/icons8-pencil-64.png" />
                                              </image>
                                           </ImageView>
                                           <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#increaseOctaveBtnClicked" prefHeight="26.0" prefWidth="29.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent;" text="Button">
@@ -412,7 +412,7 @@
                                        <children>
                                           <ImageView fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../picture/icons8-beson-64.png" />
+                                                <Image url="@../picture/icons8-beson-64.png" />
                                              </image>
                                           </ImageView>
                                           <Button mnemonicParsing="false" onMouseClicked="#clearPatternClicked" prefHeight="38.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
@@ -456,7 +456,7 @@
                            <children>
                               <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../picture/icons8-record-64.png" />
+                                    <Image url="@../picture/icons8-record-64.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="recordLabel" onMouseClicked="#recordLabelClicked" styleClass="animation" text="RECORD" textFill="#939393">
@@ -476,7 +476,7 @@
                            <children>
                               <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../picture/icons8-keyboard-64.png" />
+                                    <Image url="@../picture/icons8-keyboard-64.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets bottom="3.0" />
@@ -496,7 +496,7 @@
                            <children>
                               <ImageView fitHeight="36.0" fitWidth="31.0" onMouseClicked="#volumeBoxClicked" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../picture/icons8-volume-64.png" />
+                                    <Image url="@../picture/icons8-volume-64.png" />
                                  </image>
                               </ImageView>
                               <Label onMouseClicked="#volumeBoxClicked" styleClass="animation" text="VOLUME" textFill="#939393">
@@ -513,7 +513,7 @@
                            <children>
                               <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../picture/icons8-art-64.png" />
+                                    <Image url="@../picture/icons8-art-64.png" />
                                  </image>
                               </ImageView>
                               <Label onMouseClicked="#instrumentBoxClicked" styleClass="animation" text="INSTRUMENT" textFill="#939393">
@@ -530,7 +530,7 @@
                            <children>
                               <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../picture/icons8-copy-48.png" />
+                                    <Image url="@../picture/icons8-copy-48.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="saveLabel" disable="true" onMouseClicked="#saveRecord" styleClass="animation" text="SAVE" textFill="#939393">
@@ -547,7 +547,7 @@
                            <children>
                               <ImageView fitHeight="19.0" fitWidth="20.0" onMouseClicked="#RecordBoxClicked" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../picture/icons8-music-folder-48.png" />
+                                    <Image url="@../picture/icons8-music-folder-48.png" />
                                  </image>
                               </ImageView>
                               <Label focusTraversable="false" onMouseClicked="#RecordBoxClicked" styleClass="animation" text="SONG" textFill="#939393">
@@ -819,7 +819,7 @@
                            <children>
                               <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" rotate="27.3">
                                  <image>
-                                    <Image url="@../../picture/icons8-tool-64.png" />
+                                    <Image url="@../picture/icons8-tool-64.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets top="35.0" />
@@ -923,7 +923,7 @@
                      <children>
                         <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../picture/icons8-earbud-headphones-50.png" />
+                              <Image url="@../picture/icons8-earbud-headphones-50.png" />
                            </image>
                            <HBox.margin>
                               <Insets top="5.0" />
@@ -954,7 +954,7 @@
                      <children>
                         <ImageView fitHeight="101.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../picture/icons8-soundcloud-50.png" />
+                              <Image url="@../picture/icons8-soundcloud-50.png" />
                            </image>
                            <HBox.margin>
                               <Insets top="5.0" />
@@ -988,7 +988,7 @@
                      <children>
                         <ImageView fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../picture/icons8-instrument-64.png" />
+                              <Image url="@../picture/icons8-instrument-64.png" />
                            </image>
                            <HBox.margin>
                               <Insets top="11.0" />
@@ -1022,7 +1022,7 @@
                      <children>
                         <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../picture/icons8-grand-piano-51.png" />
+                              <Image url="@../picture/icons8-grand-piano-51.png" />
                            </image>
                            <HBox.margin>
                               <Insets top="8.0" />

@@ -1,10 +1,10 @@
 .mainBackground {
-	-fx-background-image: url("/piano/picture/mainBackground.png");
+	-fx-background-image: url("/dsai/piano/screen/picture/mainBackground.png");
 	-fx-background-size: 100% 100%;
 }
 
 .topBackground {
-	-fx-background-image: url("/piano/picture/drop.gif");
+	-fx-background-image: url("/dsai/piano/screen/picture/drop.gif");
 	-fx-background-size: 100% 100%;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .slider .thumb {
-    -fx-background-image :url("/piano/picture/icons8-jake-48.png");   
+    -fx-background-image :url("/dsai/piano/screen/picture/icons8-jake-48.png");   
     -fx-background-size: 100% 100%;
     -fx-pref-height: 20;
     -fx-pref-width: 20;
@@ -95,7 +95,7 @@
 
 
 .black-key {
-	-fx-background-image: url("/piano/picture/blackKey.png");
+	-fx-background-image: url("/dsai/piano/screen/picture/blackKey.png");
 	-fx-background-size: 100% 100%;
 }
 

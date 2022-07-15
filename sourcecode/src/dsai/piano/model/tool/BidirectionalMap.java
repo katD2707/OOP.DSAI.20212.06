@@ -1,4 +1,4 @@
-package dsai.piano.tool;
+package dsai.piano.model.tool;
 
 import java.util.HashMap;
 import java.util.Map;
