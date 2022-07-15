@@ -19,7 +19,6 @@ public class MainScreen extends Application {
 		final String MAIN_FXML_FILE_PATH = "/piano/screen/fxmlSupporter/Main.fxml";
 		Parent root = FXMLLoader.load(getClass().getResource(MAIN_FXML_FILE_PATH));
 		
-		
 		Scene scene = new Scene(root);
 		
 		mainStage.setScene(scene);

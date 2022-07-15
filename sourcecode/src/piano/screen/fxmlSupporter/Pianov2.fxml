@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -29,7 +24,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" prefHeight="797.0" prefWidth="1536.0" styleClass="mainBackground" stylesheets="@../cssSupporter/PianoSupporter.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" prefHeight="797.0" prefWidth="1536.0" styleClass="mainBackground" stylesheets="@../cssSupporter/PianoSupporter.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="TOP_CENTER" prefHeight="153.0" prefWidth="1536.0" styleClass="topBackground" stylesheets="@../cssSupporter/PianoSupporter.css">
          <children>
@@ -58,7 +53,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="1536.0">
+      <HBox alignment="TOP_CENTER" prefHeight="499.0" prefWidth="1536.0">
          <children>
             <Region prefHeight="485.0" prefWidth="113.0" HBox.hgrow="NEVER" />
             <VBox prefHeight="480.0" prefWidth="1312.0" style="-fx-background-radius: 9; -fx-background-color: linear-gradient(#4f4f4f 0%, #0b0b0b 50%, #171717 100%);">
@@ -809,12 +804,12 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Button>
-                        <VBox fx:id="volumeVbox" alignment="CENTER" layoutX="548.0" layoutY="-12.0" prefHeight="242.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;" visible="false">
+                        <VBox fx:id="volumeVbox" alignment="CENTER" layoutX="548.0" layoutY="-12.0" prefHeight="242.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
                            <children>
                               <Slider fx:id="VolumeSlider" blockIncrement="6.0" majorTickUnit="10.0" minorTickCount="5" orientation="VERTICAL" prefHeight="214.0" prefWidth="39.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
                            </children>
                         </VBox>
-                        <HBox fx:id="instrumentBox" alignment="TOP_CENTER" layoutX="603.0" layoutY="-12.0" prefHeight="95.0" prefWidth="378.0" spacing="10.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;" visible="false">
+                        <HBox fx:id="instrumentBox" alignment="TOP_CENTER" layoutX="603.0" layoutY="-12.0" prefHeight="95.0" prefWidth="378.0" spacing="10.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
                            <children>
                               <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" rotate="27.3">
                                  <image>
@@ -824,18 +819,7 @@
                                     <Insets top="35.0" />
                                  </HBox.margin>
                               </ImageView>
-                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="     SELECT INSTRUMENT" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                                 <HBox.margin>
-                                    <Insets top="30.0" />
-                                 </HBox.margin>
-                              </ComboBox>
-                              <MenuButton fx:id="instrumentMenu" mnemonicParsing="false" prefWidth="100.0" text="Instrument">
+                              <MenuButton fx:id="instrumentMenu" mnemonicParsing="false" prefHeight="37.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" text="Instrument" textFill="WHITE">
                                 <items>
                                     <RadioMenuItem mnemonicParsing="false" selected="true" text="Default">
                                        <toggleGroup>
@@ -847,10 +831,19 @@
                                     <RadioMenuItem mnemonicParsing="false" text="Flute" toggleGroup="$instrumentGroup" />
                                     <RadioMenuItem mnemonicParsing="false" text="Trumpet" toggleGroup="$instrumentGroup" />
                                 </items>
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
                               </MenuButton>
                            </children>
                         </HBox>
-                        <VBox fx:id="songBox" alignment="TOP_RIGHT" layoutX="981.0" layoutY="-12.0" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;" visible="false">
+                        <VBox fx:id="songBox" alignment="TOP_RIGHT" layoutX="981.0" layoutY="-12.0" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
                            <children>
                               <Label prefHeight="30.0" prefWidth="55.0" text="DEFAULT" textFill="WHITE">
                                  <VBox.margin>
@@ -861,17 +854,18 @@
                                  </font>
                               </Label>
                               <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-pref-height: 3; -fx-border-color: null;" />
-                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="     SELECT INSTRUMENT" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
+                              <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-font-weight: bold;" text="SELECT SONG" textFill="WHITE">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                                </items>
                                  <VBox.margin>
                                     <Insets left="30.0" right="30.0" top="10.0" />
                                  </VBox.margin>
-                              </ComboBox>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </MenuButton>
                               <Label prefHeight="26.0" prefWidth="56.0" text="MY SONG" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets right="230.0" top="20.0" />
@@ -881,17 +875,18 @@
                                  </font>
                               </Label>
                               <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-border-color: null; -fx-pref-height: 3;" />
-                              <ComboBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="     SELECT INSTRUMENT" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base">
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
+                              <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10;" text="SELECT SONG" textFill="WHITE">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
                                  <VBox.margin>
                                     <Insets left="30.0" right="30.0" top="10.0" />
                                  </VBox.margin>
-                              </ComboBox>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </MenuButton>
                            </children>
                         </VBox>
                      </children>

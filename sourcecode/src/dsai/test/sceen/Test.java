@@ -13,7 +13,7 @@ public class Test extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		final String STORE_FXML_FILE_PATH = "/dsai/piano/view/Octave.fxml";
+		final String STORE_FXML_FILE_PATH = "/dsai/piano/screen/view/Octave.fxml";
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
 		OctaveController octaveController = new OctaveController(octave);
 		fxmlLoader.setController(octaveController);

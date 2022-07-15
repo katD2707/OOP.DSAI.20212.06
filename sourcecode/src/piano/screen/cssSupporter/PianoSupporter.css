@@ -59,20 +59,20 @@
 	-fx-tick-mark-fill: white;
 }
 
-.combo-box-base .text{
-    -fx-fill: rgb(255.0, 255.0, 255.0);
-    -fx-font-weight: bold;
-}
-
-.combo-box-base .list-cell {
-	-fx-background-color:  linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%);
-}
-
-.combo-box .list-view {
-	-fx-background-color:  linear-gradient(#535353 0%,#0b0b0b 100%);
-	-fx-font-weight: bold;
-	-fx-fill: rgb(255.0, 255.0, 255.0);
-}
+//.menu-button-base .text{
+//    -fx-fill: rgb(255.0, 255.0, 255.0);
+//    -fx-font-weight: bold;
+//}
+//
+//.menu-button-base .list-cell {
+//	-fx-background-color:  linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%);
+//}
+//
+//.menu-button .list-view {
+//	-fx-background-color:  linear-gradient(#535353 0%,#0b0b0b 100%);
+//	-fx-font-weight: bold;
+//	-fx-fill: rgb(255.0, 255.0, 255.0);
+//}
 
 
 .white-key {
