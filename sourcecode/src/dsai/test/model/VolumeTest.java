@@ -33,16 +33,12 @@ public class VolumeTest {
 		System.out.println(vol.getValue());
 		System.out.println(vol.getCoarseVolume());
 		System.out.println(vol.getFineVolume());
-//		vol.increaseVolume();
-//		System.out.println(vol.getCoarseVolume());
-//		System.out.println(vol.getFineVolume());
 		
 		float f1 = (16383f / 128 / 100 * 90);
 		System.out.println(f1);
 		
 		byte b1 = (byte) f1;
 		System.out.println(b1);
-//		System.out.println((new Float(90 / 100 * 16383 / 128)).byteValue());
 	}
 
 }

@@ -36,5 +36,7 @@ public abstract class Instrument {
 		return this.name;
 	}
 
-	public abstract String getInstrument();
+	public String getInstrument() {
+		return "UNSPECIFIED INSTRUMENT";
+	};
 }

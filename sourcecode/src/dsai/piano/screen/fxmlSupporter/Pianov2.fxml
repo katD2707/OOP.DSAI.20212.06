@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<<<<<<< HEAD:sourcecode/src/piano/screen/fxmlSupporter/Pianov2.fxml
+=======
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+>>>>>>> 976adeed037b63bfbfbff362d25ed9a3cf1b8ab6:sourcecode/src/dsai/piano/screen/fxmlSupporter/Pianov2.fxml
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<<<<<<< HEAD:sourcecode/src/piano/screen/fxmlSupporter/Pianov2.fxml
+<VBox alignment="TOP_CENTER" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" prefHeight="797.0" prefWidth="1536.0" styleClass="mainBackground" stylesheets="@../cssSupporter/PianoSupporter.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+=======
+<VBox alignment="TOP_CENTER" prefHeight="797.0" prefWidth="1536.0" styleClass="mainBackground" stylesheets="@../cssSupporter/PianoSupporter.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+>>>>>>> 976adeed037b63bfbfbff362d25ed9a3cf1b8ab6:sourcecode/src/dsai/piano/screen/fxmlSupporter/Pianov2.fxml
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="153.0" prefWidth="1536.0" styleClass="topBackground" stylesheets="@../cssSupporter/PianoSupporter.css">
+         <children>
+            <Label text="Electric Piano" textFill="#f48106">
+               <font>
+                  <Font name="Jokerman" size="50.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="35.0" top="10.0" />
+               </padding>
+            </Label>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" styleClass="help" stylesheets="@../cssSupporter/PianoSupporter.css" text="Help" textFill="#f48106">
+               <HBox.margin>
+                  <Insets bottom="30.0" right="20.0" top="24.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="499.0" prefWidth="1536.0">
+         <children>
+            <Region prefHeight="485.0" prefWidth="113.0" HBox.hgrow="NEVER" />
+            <VBox prefHeight="480.0" prefWidth="1312.0" style="-fx-background-radius: 9; -fx-background-color: linear-gradient(#4f4f4f 0%, #0b0b0b 50%, #171717 100%);">
+               <children>
+                  <HBox prefHeight="117.0" prefWidth="1334.0">
+                     <children>
+                        <GridPane hgap="6.0" prefHeight="99.0" prefWidth="212.0" vgap="6.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="1.0" prefWidth="4.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <HBox.margin>
+                              <Insets left="18.0" top="15.0" />
+                           </HBox.margin>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="11" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="12" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="13" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="14" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="15" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="16" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="17" GridPane.rowIndex="8" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="18" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="1" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="2" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="3" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="6" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="7" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="18" GridPane.rowIndex="8" />
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="858.0" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black;">
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="12.0" />
+                           </HBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="95.0" prefWidth="123.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" focusTraversable="false" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: #ff8300;" text="Play">
+                                       <font>
+                                          <Font name="System Bold" size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <Separator maxWidth="-Infinity" prefHeight="5.0" prefWidth="70.0" />
+                                    <TextField alignment="CENTER" editable="false" focusTraversable="false" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: #ff8300;" text="Key" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="21.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="80.0" prefWidth="3.0">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox prefHeight="93.0" prefWidth="571.0">
+                                 <children>
+                                    <TextField fx:id="keyLabel" alignment="TOP_LEFT" editable="false" focusTraversable="false" prefHeight="36.0" prefWidth="568.0" style="-fx-background-color: white;">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <HBox fx:id="titleBox" prefHeight="100.0" prefWidth="200.0" visible="false">
+                                       <children>
+                                          <Label contentDisplay="TOP" prefHeight="59.0" prefWidth="87.0" text="Title" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="titleLabel" focusTraversable="false" prefHeight="40.0" prefWidth="400.0" promptText="Viet lien khong cach " HBox.hgrow="NEVER">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="80.0">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <GridPane alignment="CENTER" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" prefHeight="95.0" prefWidth="98.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../picture/icons8-rotate-100.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" onMouseClicked="#replayPatternClicked" prefHeight="47.0" prefWidth="49.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
+                                             <tooltip>
+                                                <Tooltip text="Replay">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <ImageView fitHeight="43.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../picture/icons8-replay-10-100.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#decreaseOctaveBtnClicked" prefHeight="34.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
+                                             <tooltip>
+                                                <Tooltip text="Back 10s">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <ImageView fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../picture/icons8-pencil-64.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#increaseOctaveBtnClicked" prefHeight="26.0" prefWidth="29.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent;" text="Button">
+                                             <tooltip>
+                                                <Tooltip text="Edit">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <ImageView fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../picture/icons8-beson-64.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" onMouseClicked="#clearPatternClicked" prefHeight="38.0" prefWidth="35.0" style="-fx-text-fill: transparent; -fx-border-fill: transparent; -fx-background-color: transparent; -fx-background-radius: 10;" text="Button">
+                                             <tooltip>
+                                                <Tooltip text="Clear">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="225.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="83.0" prefWidth="215.0" text="Group 06" textFill="#ff8300">
+                                 <font>
+                                    <Font name="Jokerman" size="45.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TilePane alignment="CENTER" hgap="40.0" onKeyPressed="#notePressed" onKeyReleased="#noteReleased" prefHeight="43.0" prefWidth="1314.0" style="-fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-background-color: linear-gradient(#171717 0%, #0b0b0b 50%, #4f4f4f 100%); -fx-border-insets: 1 0 1 0; -fx-border-color: #303030; -fx-border-radius: 8,7,6;">
+                     <VBox.margin>
+                        <Insets bottom="13.0" left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="28.0" prefWidth="162.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../picture/icons8-record-64.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="recordLabel" onMouseClicked="#recordLabelClicked" styleClass="animation" text="RECORD" textFill="#939393">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <TilePane.margin>
+                              <Insets />
+                           </TilePane.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="31.0" prefWidth="162.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../picture/icons8-keyboard-64.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" onMouseClicked="#assistantClicked" styleClass="animation" text="KEY ASSISTANT" textFill="#939393">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="36.0" fitWidth="31.0" onMouseClicked="#volumeBoxClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../picture/icons8-volume-64.png" />
+                                 </image>
+                              </ImageView>
+                              <Label onMouseClicked="#volumeBoxClicked" styleClass="animation" text="VOLUME" textFill="#939393">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="135.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../picture/icons8-art-64.png" />
+                                 </image>
+                              </ImageView>
+                              <Label onMouseClicked="#instrumentBoxClicked" styleClass="animation" text="INSTRUMENT" textFill="#939393">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="31.0" prefWidth="152.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../picture/icons8-copy-48.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="saveLabel" disable="true" onMouseClicked="#saveRecord" styleClass="animation" text="SAVE" textFill="#939393">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="31.0" prefWidth="152.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="19.0" fitWidth="20.0" onMouseClicked="#RecordBoxClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../picture/icons8-music-folder-48.png" />
+                                 </image>
+                              </ImageView>
+                              <Label focusTraversable="false" onMouseClicked="#RecordBoxClicked" styleClass="animation" text="SONG" textFill="#939393">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </TilePane>
+                  <AnchorPane onKeyPressed="#notePressed" onKeyReleased="#noteReleased" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnQ" alignment="BOTTOM_CENTER" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C4">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnH" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="738.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A5">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnG" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="676.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G5">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnE" alignment="BOTTOM_CENTER" layoutX="123.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E4">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnU" alignment="BOTTOM_CENTER" layoutX="369.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B4">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnT" alignment="BOTTOM_CENTER" layoutX="246.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G4">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnF" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="615.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F5">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnD" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="553.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E5">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnS" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="492.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D5" textAlignment="CENTER">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnA" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="430.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C5">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnY" alignment="BOTTOM_CENTER" layoutX="307.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A4">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnR" alignment="BOTTOM_CENTER" layoutX="184.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F4">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnW" alignment="BOTTOM_CENTER" layoutX="61.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D4">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnC" alignment="BOTTOM_CENTER" layoutX="984.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="E6">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnM" alignment="BOTTOM_CENTER" layoutX="1230.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B6">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnN" alignment="BOTTOM_CENTER" layoutX="1168.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="A6">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnB" alignment="BOTTOM_CENTER" layoutX="1107.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="G6">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnV" alignment="BOTTOM_CENTER" layoutX="1045.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="F6">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnX" alignment="BOTTOM_CENTER" layoutX="922.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="D6">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnZ" alignment="BOTTOM_CENTER" layoutX="861.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="C6">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnJ" alignment="BOTTOM_CENTER" focusTraversable="false" layoutX="799.5" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="300.0" prefWidth="60.0" styleClass="white-key" text="B5">
+                           <padding>
+                              <Insets bottom="80.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn1" alignment="CENTER" layoutX="40.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn4" alignment="CENTER" layoutX="286.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn3" alignment="CENTER" layoutX="226.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn2" alignment="CENTER" layoutX="101.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn6" alignment="CENTER" layoutX="471.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn5" alignment="CENTER" layoutX="348.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#4" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnL" alignment="CENTER" layoutX="1209.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnK" alignment="CENTER" layoutX="1147.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnP" alignment="CENTER" layoutX="1086.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnO" alignment="CENTER" layoutX="963.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnI" alignment="CENTER" layoutX="901.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="C#6" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn0" alignment="CENTER" focusTraversable="false" layoutX="778.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="A#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn9" alignment="CENTER" focusTraversable="false" layoutX="716.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="G#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn8" alignment="CENTER" focusTraversable="false" layoutX="657.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="F#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn7" alignment="CENTER" focusTraversable="false" layoutX="532.0" mnemonicParsing="false" onMousePressed="#btnNoteMousePressed" onMouseReleased="#btnNoteMouseReleased" prefHeight="200.0" prefWidth="40.0" styleClass="black-key" text="D#5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Button>
+                        <VBox fx:id="volumeVbox" alignment="CENTER" layoutX="548.0" layoutY="-12.0" prefHeight="242.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
+                           <children>
+                              <Slider fx:id="VolumeSlider" blockIncrement="6.0" majorTickUnit="10.0" minorTickCount="5" orientation="VERTICAL" prefHeight="214.0" prefWidth="39.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+                           </children>
+                        </VBox>
+                        <HBox fx:id="instrumentBox" alignment="TOP_CENTER" layoutX="603.0" layoutY="-12.0" prefHeight="95.0" prefWidth="378.0" spacing="10.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" rotate="27.3">
+                                 <image>
+                                    <Image url="@../picture/icons8-tool-64.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="35.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <MenuButton fx:id="instrumentMenu" mnemonicParsing="false" prefHeight="37.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" text="Instrument" textFill="WHITE">
+                                <items>
+                                    <RadioMenuItem mnemonicParsing="false" selected="true" text="Default">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="instrumentGroup" />
+                                       </toggleGroup>
+                                    </RadioMenuItem>
+                                    <RadioMenuItem mnemonicParsing="false" text="Guitar" toggleGroup="$instrumentGroup" />
+                                    <RadioMenuItem mnemonicParsing="false" text="Violin" toggleGroup="$instrumentGroup" />
+                                    <RadioMenuItem mnemonicParsing="false" text="Flute" toggleGroup="$instrumentGroup" />
+                                    <RadioMenuItem mnemonicParsing="false" text="Trumpet" toggleGroup="$instrumentGroup" />
+                                </items>
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </MenuButton>
+                           </children>
+                        </HBox>
+                        <VBox fx:id="songBox" alignment="TOP_RIGHT" layoutX="981.0" layoutY="-12.0" prefHeight="214.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(#000000 0%, #4f4f4f 50%, #0b0b0b 100%); -fx-background-radius: 0 0 8 8;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="55.0" text="RECORD" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets right="230.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-pref-height: 3; -fx-border-color: null;" />
+<<<<<<< HEAD:sourcecode/src/piano/screen/fxmlSupporter/Pianov2.fxml
+                              <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-font-weight: bold;" text="SELECT SONG" textFill="WHITE">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                                </items>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </MenuButton>
+                              <Label prefHeight="26.0" prefWidth="56.0" text="MY SONG" textFill="WHITE">
+=======
+                              <ComboBox fx:id="recordCombobox" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="227.0" promptText="Your Record" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10; -fx-prompt-text-fill: white;" styleClass="combo-box-base" visibleRowCount="4">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="10.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="300.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnPlayRecord" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#btnPlayRecordPressed" prefWidth="60.0" text="Play">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnRemoveRecord" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#btnRemoveRecordPressed" prefWidth="60.0" text="Remove" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+>>>>>>> 976adeed037b63bfbfbff362d25ed9a3cf1b8ab6:sourcecode/src/dsai/piano/screen/fxmlSupporter/Pianov2.fxml
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Separator maxWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #ff8300; -fx-border-color: null; -fx-pref-height: 3;" />
+<<<<<<< HEAD:sourcecode/src/piano/screen/fxmlSupporter/Pianov2.fxml
+                              <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="227.0" style="-fx-background-color: linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%)linear-gradient(#3a3a3a 0%, #000000 25%, #212020 50%,  #000000 75%, #3a3a3a 100%); -fx-background-radius: 10;" text="SELECT SONG" textFill="WHITE">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </MenuButton>
+=======
+>>>>>>> 976adeed037b63bfbfbff362d25ed9a3cf1b8ab6:sourcecode/src/dsai/piano/screen/fxmlSupporter/Pianov2.fxml
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Region prefHeight="400.0" prefWidth="101.75" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <TilePane alignment="CENTER" hgap="100.0" prefHeight="164.0" prefWidth="1536.0">
+         <children>
+            <VBox prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 13; -fx-border-color: #ff8300; -fx-border-width: 8;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="96.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/icons8-earbud-headphones-50.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="187.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="55.0" prefWidth="176.0" text="Click, hit keyboard or even edit note in your song" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <TilePane.margin>
+                  <Insets />
+               </TilePane.margin>
+            </VBox>
+            <VBox prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 13; -fx-border-color: #ff8300; -fx-border-width: 8;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="78.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="101.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/icons8-soundcloud-50.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="187.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="55.0" prefWidth="176.0" text="Record your own song" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets top="6.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <TilePane.margin>
+                  <Insets />
+               </TilePane.margin>
+            </VBox>
+            <VBox prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 13; -fx-border-color: #ff8300; -fx-border-width: 8;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="114.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/icons8-instrument-64.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="11.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="187.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="176.0" text="Set style for your piano" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="8.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <TilePane.margin>
+                  <Insets />
+               </TilePane.margin>
+            </VBox>
+            <VBox prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 13; -fx-border-color: #ff8300; -fx-border-width: 8;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="114.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/icons8-grand-piano-51.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="187.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="176.0" text="Select default song" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <TilePane.margin>
+                  <Insets />
+               </TilePane.margin>
+            </VBox>
+         </children>
+      </TilePane>
+   </children>
+</VBox>
