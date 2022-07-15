@@ -84,7 +84,7 @@ public class VirtualPianoVer2Controller {
     private Button btnRemoveRecord, btnPlayRecord;
     
     @FXML
-    private VBox volumeVbox, songBox;
+    private VBox volumeBox, songBox;
     
     @FXML
     private HBox instrumentBox, titleBox;
@@ -307,7 +307,7 @@ public class VirtualPianoVer2Controller {
     		instrumentBox.setVisible(false);
     		volumeVisible = true;
     	}
-    	volumeVbox.setVisible(volumeVisible);
+    	volumeBox.setVisible(volumeVisible);
     }
     @FXML
     void instrumentBoxClicked(MouseEvent event) {	
@@ -319,7 +319,7 @@ public class VirtualPianoVer2Controller {
     	} else {
     		instrumentVisible = true;
     		volumeVisible = false;
-    		volumeVbox.setVisible(false);
+    		volumeBox.setVisible(false);
     		songVisible = false;
     		songBox.setVisible(false);
     	}
@@ -335,7 +335,7 @@ public class VirtualPianoVer2Controller {
     	} else {
     		songVisible = true;
     		volumeVisible = false;
-    		volumeVbox.setVisible(false);
+    		volumeBox.setVisible(false);
     		instrumentVisible = false;
     		instrumentBox.setVisible(false);
     		updateRecordBox(null);
