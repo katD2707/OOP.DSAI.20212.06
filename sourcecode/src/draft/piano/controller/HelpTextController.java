@@ -1,4 +1,4 @@
-package piano.controllers;
+package draft.piano.controller;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -11,13 +11,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class MainScreenController {
 	
 	private static VirtualPianoVer2 piano;
+	Stage pianoStage;
 	
     @FXML
     private Button helpButton;
@@ -34,7 +38,7 @@ public class MainScreenController {
     @FXML
     void playButtonPresed(ActionEvent event) throws IOException, MidiUnavailableException {
     	piano  = new VirtualPianoVer2();
-    	
+    	((Stage)((Node)event.getSource()).getScene().getWindow()).close();
     	final String HELP_FXML_FILE_PATH = "/dsai/piano/screen/fxmlSupporter/Pianov2.fxml";
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(HELP_FXML_FILE_PATH));
 		VirtualPianoVer2Controller controller = new VirtualPianoVer2Controller(piano);
@@ -42,14 +46,15 @@ public class MainScreenController {
 		Parent root = fxmlLoader.load();	
 		
 		Scene scene = new Scene(root);
-		scene.getStylesheets().add(getClass().getResource("../screen/cssSupporter/HelpSupporter.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("../screen/cssSupporter/PianoSupporter.css").toExternalForm());
 		
-		Stage pianoStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		pianoStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		pianoStage.setScene(scene);
 
 		pianoStage.centerOnScreen();
-
+		
     	pianoStage.show();
     }
-
+    
+   
 }

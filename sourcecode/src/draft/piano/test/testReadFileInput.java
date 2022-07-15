@@ -1,4 +1,4 @@
-package piano.test;
+package draft.piano.test;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

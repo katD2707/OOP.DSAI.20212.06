@@ -1,4 +1,4 @@
-package piano.view;
+package draft.piano.view;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
