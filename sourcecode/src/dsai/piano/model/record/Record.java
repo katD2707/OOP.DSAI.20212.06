@@ -47,10 +47,5 @@ public class Record {
 	public String toString() {
 		return this.name;
 	}
-	
-//	public static void main(String[] args) {
-//		Record rc = new Record();
-//		rc.setPattern("  acd dkv  ");
-//		System.out.println(rc.getLength());
-//	}
+
 }

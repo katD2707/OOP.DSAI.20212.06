@@ -38,7 +38,7 @@ public class MainScreenController {
     @FXML
     void playButtonPresed(ActionEvent event) throws IOException, MidiUnavailableException {
     	piano  = new VirtualPianoVer2();
-    	((Stage)((Node)event.getSource()).getScene().getWindow()).close();
+   
     	final String HELP_FXML_FILE_PATH = "/dsai/piano/screen/fxmlSupporter/Pianov2.fxml";
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(HELP_FXML_FILE_PATH));
 		VirtualPianoVer2Controller controller = new VirtualPianoVer2Controller(piano);

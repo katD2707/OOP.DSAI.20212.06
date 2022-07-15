@@ -68,6 +68,7 @@ public class PianoNote extends Note {
 	public String toString() {
 		return "Piano Note: " + this.getOriginalString() + ", Key String: " + this.getKeyChar();
 	}
+	
 	@Override
 	public String getOriginalString() {
 		return super.getOriginalString().replaceAll("[0-9]+", "") + this.getOctave();
