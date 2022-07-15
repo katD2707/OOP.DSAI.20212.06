@@ -1,7 +1,7 @@
-package dsai.test.sceen;
+package draft.view;
 
-import dsai.piano.controller.OctaveController;
-import dsai.piano.model.Octave;
+import draft.controller.OctaveController;
+import draft.model.Octave;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

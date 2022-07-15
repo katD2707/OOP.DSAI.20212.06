@@ -1,4 +1,4 @@
-package dsai.test.model;
+package draft.model;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -14,8 +14,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import dsai.piano.model.Octave;
 
 public class OctaveTest extends JFrame {
 	public JButton btn;

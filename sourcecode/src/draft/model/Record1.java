@@ -1,11 +1,12 @@
-package dsai.piano.model;
+package draft.model;
 
 import java.util.ArrayList;
 
-import dsai.piano.model.component.pianoNote;
+import dsai.piano.model.Playable;
+import dsai.piano.model.component.PianoNote;
 
 public class Record1 implements Playable {
-	private ArrayList<pianoNote> record;
+	private ArrayList<PianoNote> record;
 	@Override
 	public void play() {
 		// TODO Auto-generated method stub
@@ -14,13 +15,13 @@ public class Record1 implements Playable {
 	
 	public Record1() {
 	}
-	public ArrayList<pianoNote> getRecord() {
+	public ArrayList<PianoNote> getRecord() {
 		return this.record;
 	}
 	
 	public String toString() {
 		String strRecord = "";
-		for (pianoNote note: record) {
+		for (PianoNote note: record) {
 			strRecord += note.toString() + " ";
 		}
 		return strRecord;

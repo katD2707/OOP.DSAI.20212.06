@@ -10,8 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import dsai.piano.model.piano2;
-import dsai.piano.model.component.pianoNote;
+import dsai.piano.model.VirtualPianoVer2;
+import dsai.piano.model.component.PianoNote;
 import dsai.piano.model.instrument.Flute;
 import dsai.piano.model.instrument.Guitar;
 import dsai.piano.model.instrument.Piano;
@@ -20,10 +20,10 @@ import dsai.piano.model.instrument.Violin;
 import dsai.piano.model.record.Record;
 
 public class RecordTest extends JFrame {
-	private piano2 piano;;
+	private VirtualPianoVer2 piano;;
 	private Record rec1 = new Record("C C#7 D G# D#6");
 	public RecordTest() throws MidiUnavailableException {
-		piano = new piano2(80);
+		piano = new VirtualPianoVer2(80);
 		JPanel panel = new JPanel(new GridLayout(2, 1));
 		JButton btn1 = new JButton("Start");
 		JButton btn2 = new JButton("Stop");
@@ -32,7 +32,7 @@ public class RecordTest extends JFrame {
 //		piano.setInstrument(new Flute());;
 		this.add(panel);
 		btn1.addKeyListener(new KeyListener() {
-			pianoNote a = new pianoNote("C3");
+			PianoNote a = new PianoNote("C3");
 			boolean play = true;
 			
 			@Override
@@ -72,13 +72,13 @@ public class RecordTest extends JFrame {
 	
 	public static void main(String[] args) throws MidiUnavailableException, InterruptedException {
 //		// TODO Auto-generated method stub
-		piano2 piano = new piano2(80);
+		VirtualPianoVer2 piano = new VirtualPianoVer2(80);
 		Record rec1 = new Record("C C#7 D G# D#6");
 		Record rec2 = new Record("E B#7 D3 B  D#6");
 		piano.setInstrument(new Flute());
 		System.out.println(piano.getInstrument());
 
-		pianoNote note = new pianoNote("C#4");
+		PianoNote note = new PianoNote("C#4");
 		note.setOctave(5);
 		
 		piano.addRecord(rec1);

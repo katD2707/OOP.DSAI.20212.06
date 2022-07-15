@@ -1,6 +1,6 @@
-package dsai.test.sceen;
+package draft.view;
 
-import dsai.piano.controller.VolumeController;
+import draft.controller.VolumeController;
 import dsai.piano.model.component.Volume;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

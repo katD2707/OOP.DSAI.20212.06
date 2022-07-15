@@ -1,8 +1,6 @@
-package dsai.piano.controller;
+package draft.controller;
 
-import javax.sound.midi.MidiUnavailableException;
-
-import dsai.piano.model.Piano;
+import dsai.piano.model.PianoVer1;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,9 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 
 public class pianoController {
-	private Piano piano;
+	private PianoVer1 piano;
 	
-	public pianoController(Piano piano) {
+	public pianoController(PianoVer1 piano) {
 		this.piano = piano;
 	}
 	

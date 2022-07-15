@@ -19,15 +19,15 @@ import javax.swing.KeyStroke;
 import org.jfugue.realtime.RealtimePlayer;
 
 import dsai.piano.model.component.Volume;
-import dsai.piano.model.component.pianoNote;
+import dsai.piano.model.component.PianoNote;
 
-public class Piano  {
+public class PianoVer1  {
 	private Volume volume;
-	private Map<String, pianoNote> notesMap;
-	private ArrayList<pianoNote> pianoNotes;
+	private Map<String, PianoNote> notesMap;
+	private ArrayList<PianoNote> PianoNotes;
 	private RealtimePlayer player;
 	public boolean[] enableKeys;
-	public Piano() throws MidiUnavailableException {
+	public PianoVer1() throws MidiUnavailableException {
 		super();
 		this.player = new RealtimePlayer();
 		this.setUpPiano();
@@ -39,13 +39,13 @@ public class Piano  {
 	}
 
 
-	public Map<String, pianoNote> getNotesMap() {
+	public Map<String, PianoNote> getNotesMap() {
 		return notesMap;
 	}
 
 
-	public ArrayList<pianoNote> getPianoNotes() {
-		return pianoNotes;
+	public ArrayList<PianoNote> getPianoNotes() {
+		return PianoNotes;
 	}
 
 
@@ -55,55 +55,55 @@ public class Piano  {
 	}
 	
 	
-	public void addPianoNote(pianoNote note) {
-		this.pianoNotes.add(note);
+	public void addPianoNote(PianoNote note) {
+		this.PianoNotes.add(note);
 		this.notesMap.put(note.getKeyChar(), note);
 	}
 	
 	
 	public void increaseOctave() {
-		for (pianoNote note: pianoNotes) {
+		for (PianoNote note: PianoNotes) {
 			note.increaseOctave();
 		}
 	}
 	
 	public void decreaseOctave() {
-		for (pianoNote note: pianoNotes) {
+		for (PianoNote note: PianoNotes) {
 			note.decreaseOctave();
 		}
 	}
 	public byte getOctave() {
-		return this.pianoNotes.get(0).getOctave();
+		return this.PianoNotes.get(0).getOctave();
 	}
 	
 	public void setUpPiano() {
 		this.volume = new Volume();
-		this.pianoNotes = new ArrayList<pianoNote>();
-		this.notesMap = new HashMap<String, pianoNote>();
+		this.PianoNotes = new ArrayList<PianoNote>();
+		this.notesMap = new HashMap<String, PianoNote>();
 			
-		pianoNote noteC = new pianoNote("C", "A");
+		PianoNote noteC = new PianoNote("C", "A");
 		this.addPianoNote(noteC);
-		pianoNote noteCD = new pianoNote("C#", "W");
+		PianoNote noteCD = new PianoNote("C#", "W");
 		this.addPianoNote(noteCD);
-		pianoNote noteD = new pianoNote("D", "S");
+		PianoNote noteD = new PianoNote("D", "S");
 		this.addPianoNote(noteD);
-		pianoNote noteDE = new pianoNote("D#", "E");
+		PianoNote noteDE = new PianoNote("D#", "E");
 		this.addPianoNote(noteDE);
-		pianoNote noteE = new pianoNote("E", "D");
+		PianoNote noteE = new PianoNote("E", "D");
 		this.addPianoNote(noteE);
-		pianoNote noteF = new pianoNote("F", "F");
+		PianoNote noteF = new PianoNote("F", "F");
 		this.addPianoNote(noteF);
-		pianoNote noteFG = new pianoNote("F#", "T");
+		PianoNote noteFG = new PianoNote("F#", "T");
 		this.addPianoNote(noteFG);
-		pianoNote noteG = new pianoNote("G", "G");
+		PianoNote noteG = new PianoNote("G", "G");
 		this.addPianoNote(noteG);
-		pianoNote noteGA = new pianoNote("G#", "Y");
+		PianoNote noteGA = new PianoNote("G#", "Y");
 		this.addPianoNote(noteGA);
-		pianoNote noteA = new pianoNote("A", "H");
+		PianoNote noteA = new PianoNote("A", "H");
 		this.addPianoNote(noteA);
-		pianoNote noteAB = new pianoNote("A#", "U");
+		PianoNote noteAB = new PianoNote("A#", "U");
 		this.addPianoNote(noteAB);
-		pianoNote noteB = new pianoNote("B", "J");
+		PianoNote noteB = new PianoNote("B", "J");
 		this.addPianoNote(noteB);
 	
 		enableKeys = new boolean[12];

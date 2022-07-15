@@ -7,10 +7,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import javax.sound.midi.MidiUnavailableException;
 import javax.swing.JButton;
@@ -18,23 +18,21 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import dsai.piano.model.Piano;
+import dsai.piano.model.PianoVer1;
 
-public class pianoTest extends JFrame {
-	private Piano piano;
+public class VirtualPianoVer1 extends JFrame {
+	private PianoVer1 piano;
 	private Map<String, JButton> map;
 	
-	public void BuildGUI() throws MidiUnavailableException {
-		this.piano = new Piano();
+	public void BuildGUI() throws MidiUnavailableException{
+		this.piano = new PianoVer1();
 		this.map = new HashMap<String, JButton>();
 		piano.getPlayer().changeInstrument(40);
 		
 		
-		this.setLayout(new GridLayout(2, 1));
+		this.setLayout(new GridLayout(3, 1));
 		
 		JPanel panel = new JPanel(new GridLayout(2, 1));
-//		JLabel lb = new JLabel();
-//		lb.setText("something");
 		
 		this.add(panel);
 		this.setSize(600, 300);
@@ -47,8 +45,37 @@ public class pianoTest extends JFrame {
 			map.put(keyStr, btn);
 			panel.add(btn);
 			btn.setFocusable(false);
-			btn.addActionListener(evt -> {
-				this.piano.getPlayer().startNote(this.piano.getNotesMap().get(keyStr));
+			btn.addMouseListener(new MouseListener() {
+				
+				@Override
+				public void mouseReleased(MouseEvent e) {
+					// TODO Auto-generated method stub
+					piano.getPlayer().stopNote(piano.getNotesMap().get(keyStr));
+				}
+				
+				@Override
+				public void mousePressed(MouseEvent e) {
+					// TODO Auto-generated method stub
+					piano.getPlayer().startNote(piano.getNotesMap().get(keyStr));
+				}
+				
+				@Override
+				public void mouseExited(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
 			});
 		}
 		
@@ -103,7 +130,6 @@ public class pianoTest extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
 				piano.decreaseOctave();
 				lblOct.setText("Octave: " + piano.getOctave());
 			}
@@ -120,20 +146,13 @@ public class pianoTest extends JFrame {
 		
 		
 		
-		
-		
-		
 		this.addKeyListener(new KeyListener() {
 			
 			@Override
 			public void keyTyped(KeyEvent e) {
-				// TODO Auto-generated method stub
-				
 			}
-			
 			@Override
 			public void keyReleased(KeyEvent e) {
-				// TODO Auto-generated method stub
 				if ("ASDFGHJTYUWE".contains(("" + e.getKeyChar()))){
 					piano.enableKeys[piano.getPianoNotes().indexOf(piano.getNotesMap().get("" + e.getKeyChar()))] = true;
 					// stop node
@@ -152,7 +171,6 @@ public class pianoTest extends JFrame {
 					boolean playable = piano.enableKeys[piano.getPianoNotes().indexOf(piano.getNotesMap().get("" + e.getKeyChar()))] ;
 					if (playable) {
 						piano.enableKeys[piano.getPianoNotes().indexOf(piano.getNotesMap().get("" + e.getKeyChar()))] = false;
-//								map.get("" + e.getKeyChar()).doClick();
 								piano.getPlayer().startNote(piano.getNotesMap().get("" + e.getKeyChar()));
 								map.get("" + e.getKeyChar()).setText("O");
 								map.get("" + e.getKeyChar()).setForeground(Color.GREEN);
@@ -170,13 +188,19 @@ public class pianoTest extends JFrame {
 				}
 			}
 		});
+		JPanel panel3 = new JPanel(new GridLayout(2, 1));
+		
+		JLabel guideline = new JLabel("Turn on Caplocks to play (A-S-D-F-G-H-J W-E T-Y-U)");
+		JLabel guideline2 = new JLabel("Change octave while pressing button or keyboard occurs non-stop note playing");
+		panel3.add(guideline);
+		panel3.add(guideline2);
+		this.add(panel3);
 		this.setVisible(true);
 		
 		
 		
 	}
 	public static void main(String[] args) throws MidiUnavailableException {
-		new pianoTest().BuildGUI();
-		System.out.println("some thing");
+		new VirtualPianoVer1().BuildGUI();
 	}
 }

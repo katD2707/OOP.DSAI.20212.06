@@ -4,13 +4,13 @@ import javax.sound.midi.MidiUnavailableException;
 
 import java.util.Scanner;
 
-import dsai.piano.model.piano2;
-import dsai.piano.model.component.pianoNote;
+import dsai.piano.model.VirtualPianoVer2;
+import dsai.piano.model.component.PianoNote;
 import dsai.piano.model.instrument.Violin;
 
-public class piano2Test {
+public class PianoVer2Test {
 	public static void main(String[] args) throws MidiUnavailableException {
-		piano2 piano = new piano2();
+		VirtualPianoVer2 piano = new VirtualPianoVer2();
 		
 		
 		// Test volume
@@ -53,9 +53,9 @@ public class piano2Test {
 		scanner.close();
 		
 		// Test change octave method
-		pianoNote note = new pianoNote("D#4");
+		PianoNote note = new PianoNote("D#4");
 		
 		// Test change instrument
-		piano = new piano2(80);
+		piano = new VirtualPianoVer2(80);
 	}
 }

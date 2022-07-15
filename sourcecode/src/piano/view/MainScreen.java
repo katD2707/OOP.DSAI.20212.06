@@ -45,7 +45,7 @@ public class MainScreen extends Application {
 		alert.setTitle("Exit");
 		alert.setHeaderText("Are you finish playing?");
 		alert.setContentText("Play with us <3");
-		alert.getButtonTypes().addAll(ButtonType.OK, ButtonType.FINISH);
+		alert.getButtonTypes().addAll(ButtonType.CANCEL, ButtonType.FINISH);
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 		stage.getIcons().add(new Image("file:src/piano/picture/icons8-fire-exit-50.png"));
 		alert.showAndWait();

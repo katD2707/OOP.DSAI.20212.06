@@ -11,14 +11,12 @@ public class Record {
 	public Record(String pattern) {
 		super();
 		this.pattern = new StringBuilder(pattern);
-//		this.pattern = pattern;
 	}
 	
 	public Record(String name, String pattern) {
 		super();
 		this.name = name;
 		this.pattern = new StringBuilder(pattern);
-//		this.pattern = pattern;
 	}
 	
 	public String getName() {
@@ -38,7 +36,7 @@ public class Record {
 	}
 
 	public int getLength() {
-		return (this.pattern.toString().trim().split("\\s+|,\\s*|\\.\\s*|\\?\\s*")).length;
+		return (this.pattern.toString().trim().split("\\s+")).length;
 	}
 	
 	public void addContent(String content) {
@@ -47,14 +45,12 @@ public class Record {
 	
 	
 	public String toString() {
-		return "Record: " + this.name;
+		return this.name;
 	}
 	
-	
-	
-	public static void main(String[] args) {
-		Record rc = new Record();
-		rc.setPattern("  acd dkv  ");
-		System.out.println(rc.getLength());
-	}
+//	public static void main(String[] args) {
+//		Record rc = new Record();
+//		rc.setPattern("  acd dkv  ");
+//		System.out.println(rc.getLength());
+//	}
 }

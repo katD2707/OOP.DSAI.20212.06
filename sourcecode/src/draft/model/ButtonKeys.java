@@ -1,4 +1,4 @@
-package dsai.piano.model;
+package draft.model;
 
 import javax.swing.*;
 import java.awt.*;

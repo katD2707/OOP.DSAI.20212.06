@@ -1,11 +1,11 @@
-package dsai.piano;
+package draft.view;
 
 import javax.sound.midi.MidiUnavailableException;
 
-import dsai.piano.controller.OctaveController;
-import dsai.piano.controller.pianoController;
-import dsai.piano.model.Octave;
-import dsai.piano.model.Piano;
+import draft.controller.OctaveController;
+import draft.controller.pianoController;
+import draft.model.Octave;
+import dsai.piano.model.PianoVer1;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +13,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class virtualPiano extends Application {
-	private static Piano piano;
+	private static PianoVer1 piano;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
@@ -29,7 +29,7 @@ public class virtualPiano extends Application {
 	}
 	public static void main(String[] args) throws MidiUnavailableException {
 //		octave = new Octave();
-		piano = new Piano();
+		piano = new PianoVer1();
 		piano.setUpPiano();
 		launch(args);
 	}

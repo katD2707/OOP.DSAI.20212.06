@@ -1,7 +1,7 @@
-package dsai.piano.controller;
+package draft.controller;
 
 
-import dsai.piano.model.Octave;
+import draft.model.Octave;
 import javafx.event.ActionEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.event.EventHandler;

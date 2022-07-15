@@ -1,4 +1,4 @@
-package dsai.piano.model;
+package draft.model;
 
 
 import javafx.scene.input.KeyCode;

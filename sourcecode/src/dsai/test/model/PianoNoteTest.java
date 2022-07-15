@@ -7,10 +7,10 @@ import javax.sound.midi.MidiUnavailableException;
 import org.jfugue.pattern.Pattern;
 import org.jfugue.player.Player;
 
-import dsai.piano.model.piano2;
-import dsai.piano.model.component.pianoNote;
+import dsai.piano.model.VirtualPianoVer2;
+import dsai.piano.model.component.PianoNote;
 
-public class pianoNoteTest {
+public class PianoNoteTest {
 	public static void main(String[] args) throws MidiUnavailableException, InterruptedException {
 //		pianoNote noteC = new pianoNote("C2");
 //		System.out.println(noteC.toString());
@@ -35,8 +35,8 @@ public class pianoNoteTest {
 		
 		
 		// setOctave() method 
-		pianoNote noteD = new pianoNote("C#4");
-		piano2 piano = new piano2(80);
+		PianoNote noteD = new PianoNote("C#4");
+		VirtualPianoVer2 piano = new VirtualPianoVer2(80);
 		piano.startNote(noteD);
 
 		System.out.println(noteD.getValue());

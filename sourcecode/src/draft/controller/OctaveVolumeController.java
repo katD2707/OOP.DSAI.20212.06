@@ -1,4 +1,4 @@
-package dsai.piano.controller;
+package draft.controller;
 
 import javafx.fxml.FXML;
 

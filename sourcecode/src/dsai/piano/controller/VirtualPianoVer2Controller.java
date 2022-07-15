@@ -2,15 +2,16 @@ package dsai.piano.controller;
 
 
 import dsai.piano.exception.NullPianoNoteException;
-import dsai.piano.map.BidirectionalMap;
-import dsai.piano.model.piano2;
-import dsai.piano.model.component.pianoNote;
+import dsai.piano.model.VirtualPianoVer2;
+import dsai.piano.model.component.PianoNote;
 import dsai.piano.model.instrument.Flute;
 import dsai.piano.model.instrument.Guitar;
 import dsai.piano.model.instrument.Piano;
 import dsai.piano.model.instrument.Trumpet;
 import dsai.piano.model.instrument.Violin;
 import dsai.piano.model.record.Record;
+import dsai.piano.tool.BidirectionalMap;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -25,29 +26,30 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class VirtualPianoController {
-	private piano2 piano;
+public class VirtualPianoVer2Controller {
+	private VirtualPianoVer2 piano;
 	private byte octave = 4;
+	
 	private boolean isRecording = false;
 	private boolean assistantOn = false;
     private boolean songVisible = false;
     private boolean volumeVisible = false;
     private boolean instrumentVisible = false;
     boolean[] enableKeys;
+    
     BidirectionalMap<String, Button> buttonMap;
-	public VirtualPianoController(piano2 piano) {
+	public VirtualPianoVer2Controller(VirtualPianoVer2 piano) {
 		super();
 		this.piano = piano;
 		this.enableKeys = new boolean[piano.getNotesMap().size()];
 		for (int i = 0; i < piano.getNotesMap().size(); i++) {
 			this.enableKeys[i] = true;
-		} 
+		}   	
 	};
 	
     @FXML
@@ -86,118 +88,115 @@ public class VirtualPianoController {
     
     @FXML
     void notePressed(KeyEvent event) throws NullPianoNoteException {
-//    	System.out.println(event.getSource().toString());
-//    	System.out.println( ( (Button)event.getSource() ).getText() );
-//    	switch (( (Button)event.getSource() ).getText()) {
-//    	System.out.println(event.getSource().toString());
-    	System.out.println(event.getText());
+    	/*
+    	 * This method plays piano Note binded to keyboard button from user keyboard when a key is pressed.
+    	 * Throw NullPianoNoteException if the pressed key is not binded to piano Note.
+    	 */
     	String keyChar = event.getText();
-//    	switch (event.getText()) {
-//    		case "a": 
-//    			System.out.println("C3 was pressed");
-////    			piano.startNote(new pianoNote("C5"));
-//    			pianoNote note = piano.getNotesMap().get(event.getText().toUpperCase());
-//    			piano.startNote(note);
-////    			btnC.fire();
-//    			break;
-//    		case "b":
-//    			System.out.println("D3 was pressed");
-//    			piano.startNote(new pianoNote("E9"));
-////    			btnD.fire();
-//    			break;
-//    		case "s":
-//    			piano.setInstrument(new Flute());
-//    			break;
-//    	}
-    	if (titleLabel.isFocused()) {
-    		System.out.println("focus");
-    		if (event.getCode().equals(KeyCode.ENTER)) {
-        		System.out.println("enter pressed");
-        		btnA.requestFocus();
-    		}
-    	} else {
 	    	try {
-	    		pianoNote note = piano.getNotesMap().get(keyChar.toUpperCase());
-	    		if (this.enableKeys[note.getId()]) {
-	    			updateKeyLabel(note.getOriginalString());
-	    			piano.startNote(note);
-	    			this.enableKeys[note.getId()] = false;
-	    			
-	    			System.out.println(buttonMap.get(note.getKeyChar().toLowerCase()).getText());
-	    		} 
-	    	} catch (NullPointerException e) {
-	    		System.err.println(keyChar + " is not bind to pianoNote");
+	    		if (piano.getNotesMap().get(keyChar.toUpperCase()) != null) {
+	    			PianoNote note = piano.getNotesMap().get(keyChar.toUpperCase());
+		    		if (this.enableKeys[note.getId()]) {
+		    			updateKeyLabel(note.getOriginalString());
+		    			piano.startNote(note);
+		    			this.enableKeys[note.getId()] = false;
+		    			
+		    			System.out.println(buttonMap.get(note.getKeyChar().toLowerCase()).getText());
+		    		}
+	    		} else {
+	    			throw new NullPianoNoteException();
+	    		}
+	    	} catch (NullPianoNoteException e) {
+	    		System.err.println(event.getCode().toString() + " is not bind to pianoNote");
 	    	}
 	    	
-    	}
     }
 
     @FXML
-    void noteReleased(KeyEvent event) {
+    void noteReleased(KeyEvent event) throws NullPianoNoteException {
+    	/*
+    	 * This method stops piano Note binded to keyboard button from user keyboard when a key is released.
+    	 * Throw NullPianoNoteException if the released key is not binded to piano Note.
+    	 */
     	String keyChar = event.getText();
-    	System.out.println("note released");
     	try {
-    		pianoNote note = piano.getNotesMap().get(keyChar.toUpperCase());
-    		if (!this.enableKeys[note.getId()]) {
-    			piano.stopNote(note);
-    			this.enableKeys[note.getId()] = true;
-    		} 
-    	} catch (NullPointerException e) {
-    		
-    		System.err.println(event.getCode().toString() + " is not bind to pianoNote");
+    		if (piano.getNotesMap().get(keyChar.toUpperCase()) != null) {
+    			PianoNote note = piano.getNotesMap().get(keyChar.toUpperCase());
+    			if (!this.enableKeys[note.getId()]) {
+    				piano.stopNote(note);
+    				this.enableKeys[note.getId()] = true;
+    			} 
+    		} else {
+    			throw new NullPianoNoteException();
+    		}
+    	} catch (NullPianoNoteException e) {
     		Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setTitle("PIANO ERROR FROM KEYBOARD");
-    		alert.setHeaderText("NullPointerException");
+    		alert.setHeaderText("NullPianoNoteException");
     		alert.setContentText(event.getCode().toString() + " is not used for piano note.");
-        	
     		alert.showAndWait();
     	}
     }
     
     @FXML
-    void btnNoteMouseReleased(MouseEvent event) {
+    void btnNoteMouseReleased(MouseEvent event) throws NullPianoNoteException {
+    	/*
+    	 * This method stops piano Note binded to Button from screen when a button is released.
+    	 * Throw NullPianoNoteException if the released button is not binded to piano Note.
+    	 */
     	Button btn = (((Button) event.getSource()) );
     	String key = buttonMap.getKey(btn).toUpperCase();
     	try {
-    	pianoNote note = piano.getNotesMap().get(key);
-    	if (!this.enableKeys[note.getId()]) {
-			piano.stopNote(note);
-			this.enableKeys[note.getId()] = true;
-			
-		}
-    	} catch (NullPointerException e) {
-    		System.out.println(key + " is not bind");
+    		if (piano.getNotesMap().get(key) != null) {
+    			PianoNote note = piano.getNotesMap().get(key);
+    			if (!this.enableKeys[note.getId()]) {
+    				piano.stopNote(note);
+    				this.enableKeys[note.getId()] = true;
+    			}
+    		} else {
+    			throw new NullPianoNoteException();
+    		}
+    	} catch (NullPianoNoteException e) {
+    		System.err.println(key + " is not bind to pianoNote");
+    		Alert alert = new Alert(AlertType.INFORMATION);
+    		alert.setTitle("PIANO ERROR FROM MOUSE CLICK");
+    		alert.setHeaderText("NullPianoNoteException");
+    		alert.setContentText(key + " is not bind to pianoNote");
+    		alert.showAndWait();
     	}
     }
     
     @FXML 
     void btnNoteMousePressed(MouseEvent event) {
+    	/*
+    	 * This method plays piano Note binded to Button from screen when a button is pressed.
+    	 * Throw NullPianoNoteException if the pressed button is not binded to piano Note.
+    	 */
     	Button btn = (((Button) event.getSource()) );
     	String key = buttonMap.getKey(btn).toUpperCase();
     	try {
-    		pianoNote note = piano.getNotesMap().get(key);
-    		if (this.enableKeys[note.getId()]) {
-    			updateKeyLabel(note.getOriginalString());
-    			piano.startNote(note);
-    			this.enableKeys[note.getId()] = false;
-    			
-    			System.out.println(buttonMap.get(note.getKeyChar().toLowerCase()).getText());
+    		if (piano.getNotesMap().get(key) != null) {
+    			PianoNote note = piano.getNotesMap().get(key);
+    			if (this.enableKeys[note.getId()]) {
+    				updateKeyLabel(note.getOriginalString());
+    				piano.startNote(note);
+    				this.enableKeys[note.getId()] = false;
+    			}
+    		} else {
+    			throw new NullPianoNoteException();
     		}
-    	} catch (NullPointerException e) {
-    		System.out.println(key + " is not bind");
-    		Alert alert = new Alert(AlertType.INFORMATION);
-    		alert.setTitle("PIANO ERROR");
-    		alert.setHeaderText("NullPointerException");
-    		alert.setContentText(key + " is not used for piano note.");
-        	
-    		alert.showAndWait();
+    	} catch (NullPianoNoteException e) {
+    		System.err.println(key + " is not bind to pianoNote");
     	}
     }
     @FXML
-    void a(MouseEvent event) {
-    	if (this.octave > 0) {
+    void decreaseOctaveBtnClicked(MouseEvent event) {
+    	/*
+    	 * This method decreases octave of every note when Increase Octave Button is clicked
+    	 */
+    	if (this.octave > 3) {
     		this.octave -= 1;
-    		for (pianoNote note: piano.getNotesMap().values()) {
+    		for (PianoNote note: piano.getNotesMap().values()) {
     			note.decreaseOctave();
     		}
     	}
@@ -205,10 +204,13 @@ public class VirtualPianoController {
     }
 
     @FXML
-    void b(MouseEvent event) {
+    void increaseOctaveBtnClicked(MouseEvent event) {
+    	/*
+    	 * This method increases octave of every note when Increase Octave Button is clicked
+    	 */
     	if (this.octave < 7) {
     		this.octave += 1;
-    		for (pianoNote note: piano.getNotesMap().values()) {
+    		for (PianoNote note: piano.getNotesMap().values()) {
     			note.increaseOctave();
     		}
     	}
@@ -217,11 +219,16 @@ public class VirtualPianoController {
 
     // START MouseEvent
     @FXML 
-    void assistantClicked(MouseEvent event) {									// DONE
+    void assistantClicked(MouseEvent event) {	
+    	/*
+    	 * This method update Label in every piano note.
+    	 * When assistantOn, user can see both the note string and the key string to press.
+    	 *     	 * When assitantOn is false (off), user only see the note string.
+    	 */
     	if (assistantOn) {
     		assistantOn = false;
     		for (Button btn: buttonMap.valueSet()) {
-    			pianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
+    			PianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
     			try {
     				btn.setText(note.getOriginalString());
     			} catch (Exception e) {
@@ -232,7 +239,7 @@ public class VirtualPianoController {
     	} else {
     		assistantOn = true;
     		for (Button btn: buttonMap.valueSet()) {
-    			pianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
+    			PianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
     			btn.setText(note.getOriginalString() + " (" + buttonMap.getKey(btn).toUpperCase() + ")");
     		}
     	}
@@ -241,7 +248,10 @@ public class VirtualPianoController {
    
     
     @FXML
-    void volumeBoxClicked(MouseEvent event) {  			// DONE
+    void volumeBoxClicked(MouseEvent event) {  			
+    	/*
+    	 * This method will show or hide Volume Box, close other box.
+    	 */
     	if (volumeVisible) {
     		volumeVisible = false;
     	} else {
@@ -254,8 +264,10 @@ public class VirtualPianoController {
     	volumeVbox.setVisible(volumeVisible);
     }
     @FXML
-    void instrumentBoxClicked(MouseEvent event) {		// DONE
-    	System.out.println("instrument box clicked");
+    void instrumentBoxClicked(MouseEvent event) {	
+    	/*
+    	 * This method will show or hide Instrument Box, and close other box.
+    	 */
     	if (instrumentVisible) {
     		instrumentVisible = false;
     	} else {
@@ -268,7 +280,10 @@ public class VirtualPianoController {
     	instrumentBox.setVisible(instrumentVisible);
     }   
     @FXML
-    void songBoxClicked(MouseEvent event) {				// DONE
+    void RecordBoxClicked(MouseEvent event) {	
+    	/*
+    	 * This method will show or hide Record Box, and close other box.
+    	 */
     	if (songVisible) {
     		songVisible = false;
     	} else {
@@ -283,10 +298,15 @@ public class VirtualPianoController {
     }
 
     @FXML
-    void recordLabelClicked(MouseEvent event) {									// DONE
+    void recordLabelClicked(MouseEvent event) {	
+    	/*
+    	 * When recordLabel is clicked, this method will work:
+    	 * 		Start recording, title field is set to visible, save label is enable.
+    	 * 		Cancel recording, title field is set to invisible, save label is disable (cannot save).
+    	 */
     	if (! isRecording) {
-    		recordLabel.setText("CANCEL");
     		isRecording = true;
+    		recordLabel.setText("CANCEL");
 	    	System.out.println("record starting");
 	    	saveLabel.setDisable(false);
 	    	titleBox.setVisible(true);
@@ -303,9 +323,15 @@ public class VirtualPianoController {
     }
 
     @FXML
-    void saveRecord(MouseEvent event) {											// DONE 
+    void saveRecord(MouseEvent event) {	
+    	/*
+    	 * This method will save the record from Key field and title field from screen.
+    	 */
+    	recordLabel.setText("RECORD");
+		isRecording = false;
     	saveLabel.setDisable(true);
     	titleBox.setVisible(false);
+    	
     	Record record = new Record(titleLabel.getText(), keyLabel.getText());
     	piano.addRecord(record);
     }
@@ -338,13 +364,15 @@ public class VirtualPianoController {
     
     @FXML
     void initialize() {
+    	// Assign buttonMap to a Bidirectional Map which can retrieve both key and value.
     	buttonMap = new BidirectionalMap<String, Button>();
+    	
     	buttonMap.put("a", btnA);
     	buttonMap.put("s", btnS);
     	buttonMap.put("d", btnD);
-    	buttonMap.put("g", btnF);
-    	buttonMap.put("h", btnG);
-    	buttonMap.put("f", btnH);
+    	buttonMap.put("f", btnF);
+    	buttonMap.put("g", btnG);
+    	buttonMap.put("h", btnH);
     	buttonMap.put("j", btnJ);
     	buttonMap.put("6", btn6);
     	buttonMap.put("7", btn7);
@@ -379,6 +407,7 @@ public class VirtualPianoController {
     	buttonMap.put("l", btnL);
     	
     	
+    	// Add listener to selected Instrument, change piano instrument.
     	instrumentGroup.selectedToggleProperty().addListener((observable, oldToggle, newToggle) -> {
     		switch (((RadioMenuItem)newToggle).getText()) {
     		case "Default":
@@ -400,29 +429,46 @@ public class VirtualPianoController {
 	        instrumentMenu.setText(piano.getInstrument());
     	});
     	
+    	
+    	// Add listener to VolumeSlider, update the piano volume
     	VolumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
-
 			@Override
 			public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
-				// TODO Auto-generated method stub
 				piano.setVolume(arg2.intValue());
-				System.out.println(piano.getVolume());
 			}
 		});
     	
-    	piano.addRecord("NoName", "C D E F");									// DEFAULT RECORD OF PIANO
-    	if (piano.getRecords() != null) {
-    		recordCombobox.setItems(piano.getRecords());
-    	}
+//    	piano.addRecord("NoName", "Cq D#hhhhhhhh E F");									// DEFAULT RECORD OF PIANO
     	
+    	
+    	// Set items from Records list of piano to recordCombobox
+    	recordCombobox.setItems(piano.getRecords());
+    	
+    	// Add listener to the selection item of recordCombobox
     	recordCombobox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Record>() {
 			@Override
 			public void changed(ObservableValue<? extends Record> arg0, Record arg1, Record arg2) {
 				updateRecordBox(arg2);
 			}
 		});
+    	
+    	
+    	/*  
+    	 * set default focus for btn1
+    	 */
+    	Platform.runLater(() -> btn1.requestFocus());						
     }
-    void updateRecordBox(Record rec) {											// DONE
+    
+    
+    void updateRecordBox(Record rec) {	
+    	/*
+    	 * This method updates Combobox which contains list of Records.
+    	 * If Record is not null,
+    	 * 		If Record length is less than 3, the Play button will be disable
+    	 * 		else, Play button and Remove button will able to be pressed.
+    	 * else, disable both play button and remove button 	
+    	 * 		
+    	 */
     	if (rec != null) {
     		if (rec.getLength() > 3) {
     			keyLabel.setText(rec.getPattern().toString());
@@ -433,25 +479,30 @@ public class VirtualPianoController {
     			btnRemoveRecord.setDisable(false);
     		}
     	} else {
-    		System.out.println("here");
     		recordCombobox.getSelectionModel().clearSelection();
     		btnRemoveRecord.setDisable(true);
     		btnPlayRecord.setDisable(true);
     	}
     }
     
-    void updateKeyLabel(String text) {											// DONE
+    void updateKeyLabel(String text) {	
+    	/*
+    	 * This method update Key Label, as soon as any piano note is played.
+    	 */
     	keyLabel.setText(keyLabel.getText() + " " + text);
     }
-    void updateNoteDisplay() {													// DONE
+    void updateNoteDisplay() {		
+    	/*
+    	 * This method update Label in every piano note when user change note octave.
+    	 */
     	if (!assistantOn) {
     		for (Button btn: buttonMap.valueSet()) {
-    			pianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
+    			PianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
     				btn.setText(note.getOriginalString());
     		}
     	} else {
     		for (Button btn: buttonMap.valueSet()) {
-    			pianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
+    			PianoNote note = piano.getNotesMap().get(buttonMap.getKey(btn).toUpperCase());
     			btn.setText(note.getOriginalString() + " (" + buttonMap.getKey(btn).toUpperCase() + ")");
     		}
     	}

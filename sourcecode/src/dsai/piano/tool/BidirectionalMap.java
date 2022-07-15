@@ -1,14 +1,10 @@
-package dsai.piano.map;
+package dsai.piano.tool;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class BidirectionalMap<K, V> extends HashMap<K, V> {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	Map<V, K> inversedMap = new HashMap<V, K>();
 	
 	public K getKey(V value) {
