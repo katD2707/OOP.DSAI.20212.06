@@ -2,7 +2,6 @@ package draft.model;
 
 import java.util.ArrayList;
 
-import dsai.piano.model.Playable;
 import dsai.piano.model.component.PianoNote;
 
 public class Record1 implements Playable {

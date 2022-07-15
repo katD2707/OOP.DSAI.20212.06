@@ -1,4 +1,4 @@
-package draft.piano.test;
+package draft.model;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

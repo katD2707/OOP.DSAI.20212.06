@@ -6,43 +6,43 @@ import org.jfugue.theory.Note;
 
 public class PianoNote extends Note {
 	private String keyChar;
-	private final int id;
+	private final int ID;
 
 	public PianoNote() {
 		super();
-		this.id = -1;
+		this.ID = -1;
 	}
 	
 	public PianoNote(String note) {
 		super(note);
-		this.id = -1;
+		this.ID = -1;
 	}
 	
 	public PianoNote(String note, String keyChar) {
 		super(note);
 		this.keyChar = keyChar;
-		this.id = -1;
+		this.ID = -1;
 	}
 	
-	public PianoNote(String note, int id) {
+	public PianoNote(String note, int ID) {
 		super(note);
-		this.id = id;
+		this.ID = ID;
 	}
-	public PianoNote(String note, int id, String keyChar, int octave) {
+	public PianoNote(String note, int ID, String keyChar, int octave) {
 		super(note);
-		this.id = id;
+		this.ID = ID;
 		this.keyChar = keyChar;
 		this.setOctave(octave);
 	}
-	public PianoNote(String note, int id, String keyChar) {
+	public PianoNote(String note, int ID, String keyChar) {
 		super(note);
-		this.id = id;
+		this.ID = ID;
 		this.keyChar = keyChar;
 	}
 	
 
 	public int getId() {
-		return this.id;
+		return this.ID;
 	}
 	
 	public String getKeyChar() {

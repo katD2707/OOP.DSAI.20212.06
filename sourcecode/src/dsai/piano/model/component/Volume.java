@@ -2,8 +2,8 @@ package dsai.piano.model.component;
 
 public class Volume {
 	private int value = 50;
-	private byte coarse_volume;
-	private byte fine_volume;
+	private byte coarseVolume;
+	private byte fineVolume;
 	
 	public Volume() {
 		this.updateCoarseFineVolume();
@@ -19,10 +19,10 @@ public class Volume {
 		return this.value;
 	}
 	public byte getCoarseVolume() {
-		return this.coarse_volume;
+		return this.coarseVolume;
 	}
 	public byte getFineVolume() {
-		return this.fine_volume;
+		return this.fineVolume;
 	}
 
 	
@@ -50,7 +50,7 @@ public class Volume {
 	}
 
 	public void updateCoarseFineVolume() {
-		this.coarse_volume = (byte) (16383f / 128 * this.getValue() / 100);
-		this.fine_volume = (byte)(16383f % 128 * this.getValue() / 100);
+		this.coarseVolume = (byte) (16383f / 128 * this.getValue() / 100);
+		this.fineVolume = (byte)(16383f % 128 * this.getValue() / 100);
 	}
 } 

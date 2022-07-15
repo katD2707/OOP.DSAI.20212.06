@@ -1,4 +1,4 @@
-package dsai.piano.model;
+package draft.model;
 
 public interface Playable {
 	public void play();

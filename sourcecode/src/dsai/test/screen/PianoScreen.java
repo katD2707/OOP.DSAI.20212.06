@@ -1,4 +1,4 @@
-package draft.piano.test;
+package dsai.test.screen;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

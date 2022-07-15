@@ -1,4 +1,4 @@
-package dsai.piano.model.tool;
+package dsai.piano.tool;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,8 +24,7 @@ public class BidirectionalMap<K, V> extends HashMap<K, V> {
 		inversedMap.remove(val);
 		return val;
 	}
-	
-//	@Override
+
 	public Set<V> valueSet() {
 		return this.inversedMap.keySet();
 	}

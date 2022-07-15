@@ -1,4 +1,4 @@
-package dsai.test.model.record;
+package dsai.test.model;
 
 import java.awt.GridLayout;
 import java.awt.event.KeyEvent;

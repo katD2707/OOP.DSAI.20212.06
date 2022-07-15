@@ -1,4 +1,4 @@
-package draft.piano.view;
+package draft.view;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class MainScreen extends Application {
+public class MainScreenVer1 extends Application {
 	Stage mainStage;
 	
 	@Override

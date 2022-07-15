@@ -1,4 +1,4 @@
-package dsai.test.model.instrument;
+package dsai.test.model;
 
 import javax.sound.midi.MidiUnavailableException;
 

@@ -2,7 +2,7 @@ package dsai.piano.model.instrument;
 
 public abstract class Instrument {
 	private String name;
-	private static int INSTRUMENT_ID;
+	private static int instrument_id;
 	
 	public Instrument() {
 		super();
@@ -10,7 +10,7 @@ public abstract class Instrument {
 	
 	public Instrument(int id) {
 		super();
-		this.INSTRUMENT_ID = id;
+		this.instrument_id = id;
 	}
 
 	public Instrument(String name) {
@@ -20,7 +20,7 @@ public abstract class Instrument {
 	
 	public Instrument(int id, String name) {
 		super();
-		this.INSTRUMENT_ID = id;
+		this.instrument_id = id;
 		this.name = name;
 	}
 	
@@ -29,14 +29,13 @@ public abstract class Instrument {
 	}
 	
 	public static int getInstrumentId() {
-		return Instrument.INSTRUMENT_ID; 
+		return Instrument.instrument_id; 
 	}
 	
 	public String getName() {
 		return this.name;
 	}
 
-	public String getInstrument() {
-		return "UNSPECIFIED INSTRUMENT";
-	};
+	public abstract String getInstrument();
 }
+	
