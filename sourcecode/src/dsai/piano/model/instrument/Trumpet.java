@@ -4,7 +4,6 @@ public class Trumpet extends Instrument {
 
 	@Override
 	public String getInstrument() {
-		// TODO Auto-generated method stub
 		return "Trumpet";
 	}
 	
@@ -15,8 +14,5 @@ public class Trumpet extends Instrument {
 	public Trumpet(String name) {
 		super(56, name);
 	}
-	
-	
-	
 
 }

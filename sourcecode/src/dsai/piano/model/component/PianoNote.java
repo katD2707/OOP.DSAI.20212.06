@@ -72,23 +72,5 @@ public class PianoNote extends Note {
 	public String getOriginalString() {
 		return super.getOriginalString().replaceAll("[0-9]+", "") + this.getOctave();
 	}
-	public static void main(String[] args) throws MidiUnavailableException {
-		PianoNote note = new PianoNote("D#3");
-//		System.out.println(note.getValue());
-//		System.out.println();
-		note.setValue((byte) 72);
-		System.out.println(note.getOctave());
-		
-		PianoNote note2 = new PianoNote("C#2");
-		System.out.println(note2.getOctave());
-//		System.out.println(note2.increaseOctave());
-		note2.increaseOctave();
-		System.out.println(note2.getOctave());
-		System.out.println(note2.getValue());
-		RealtimePlayer player = new RealtimePlayer();
-		player.startNote(note2);
-		System.out.println(( ((int)(byte)49) % 12 + 12 * 4));
-		player.close();
-		System.out.println(note2.getOriginalString());
-	}
+	
 }

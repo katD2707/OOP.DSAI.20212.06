@@ -10,7 +10,7 @@ public abstract class Instrument {
 	
 	public Instrument(int id) {
 		super();
-		this.instrument_id = id;
+		Instrument.instrument_id = id;
 	}
 
 	public Instrument(String name) {
@@ -20,7 +20,7 @@ public abstract class Instrument {
 	
 	public Instrument(int id, String name) {
 		super();
-		this.instrument_id = id;
+		Instrument.instrument_id = id;
 		this.name = name;
 	}
 	

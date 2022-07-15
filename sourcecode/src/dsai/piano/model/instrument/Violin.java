@@ -14,12 +14,4 @@ public class Violin extends Instrument {
 	public Violin(String name) {
 		super(40, name);
 	}
-	
-	public static void main(String[] args) {
-		Violin violin = new Violin();
-		System.out.println(Violin.getInstrumentId());
-		
-		Violin vio2 = new Violin("My violin");
-		System.out.println(vio2.getName());
-	}
 }

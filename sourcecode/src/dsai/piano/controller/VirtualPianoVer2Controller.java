@@ -240,7 +240,7 @@ public class VirtualPianoVer2Controller {
     	/*
     	 * This method decreases octave of every note when Increase Octave Button is clicked
     	 */
-    	if (this.octave > 3) {
+    	if (this.octave > 2) {
     		this.octave -= 1;
     		for (PianoNote note: piano.getNotesMap().values()) {
     			note.decreaseOctave();

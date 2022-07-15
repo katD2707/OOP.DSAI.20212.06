@@ -2,6 +2,8 @@ package dsai.test.model;
 
 import javax.sound.midi.MidiUnavailableException;
 
+import org.jfugue.realtime.RealtimePlayer;
+
 import java.util.Scanner;
 
 import dsai.piano.model.VirtualPianoVer2;
@@ -57,5 +59,20 @@ public class PianoVer2Test {
 		
 		// Test change instrument
 		piano = new VirtualPianoVer2(80);
+		PianoNote note3 = new PianoNote("D#3");
+		note.setValue((byte) 72);
+		System.out.println(note.getOctave());
+		
+		PianoNote note2 = new PianoNote("C#2");
+		System.out.println(note2.getOctave());
+//		System.out.println(note2.increaseOctave());
+		note2.increaseOctave();
+		System.out.println(note2.getOctave());
+		System.out.println(note2.getValue());
+		RealtimePlayer player = new RealtimePlayer();
+		player.startNote(note2);
+		System.out.println(( ((int)(byte)49) % 12 + 12 * 4));
+		player.close();
+		System.out.println(note2.getOriginalString());
 	}
 }

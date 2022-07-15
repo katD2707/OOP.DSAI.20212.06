@@ -4,7 +4,6 @@ public class Flute extends Instrument {
 
 	@Override
 	public String getInstrument() {
-		// TODO Auto-generated method stub
 		return "Flute";
 	}
 	

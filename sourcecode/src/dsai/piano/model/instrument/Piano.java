@@ -4,7 +4,6 @@ public class Piano extends Instrument {
 
 	@Override
 	public String getInstrument() {
-		// TODO Auto-generated method stub
 		return "Piano";
 	}
 	
