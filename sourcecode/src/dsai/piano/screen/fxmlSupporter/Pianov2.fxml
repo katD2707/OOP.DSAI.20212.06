@@ -327,7 +327,7 @@
                                           <Insets bottom="10.0" top="10.0" />
                                        </VBox.margin>
                                     </TextField>
-                                    <HBox fx:id="titleBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                    <HBox fx:id="titleBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" visible="false">
                                        <children>
                                           <TextField fx:id="titleLabel" focusTraversable="false" prefHeight="40.0" prefWidth="400.0" promptText="Your record name" HBox.hgrow="NEVER">
                                              <HBox.margin>
