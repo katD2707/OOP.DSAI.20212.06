@@ -17,7 +17,7 @@ public class virtualPiano extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		final String STORE_FXML_FILE_PATH = "/dsai/piano/screen/view/pianoScreen.fxml";
+		final String STORE_FXML_FILE_PATH = "/draft/view/pianoScreen.fxml";
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
 		pianoController pianoCtl = new pianoController(piano);
 		fxmlLoader.setController(pianoCtl);

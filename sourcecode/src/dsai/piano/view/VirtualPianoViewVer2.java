@@ -1,4 +1,4 @@
-package dsai.piano;
+package dsai.piano.view;
 
 import javax.sound.midi.MidiUnavailableException;
 
@@ -31,13 +31,7 @@ public class VirtualPianoViewVer2 extends Application {
 		primaryStage.setTitle("Virtual Piano");
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
-//		primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-//
-//			@Override
-//			public void handle(WindowEvent arg0) {
-//	    			piano.close();
-//			}
-//		});
+
 		primaryStage.setOnCloseRequest(e -> {
 			e.consume();
 			closeProgram();

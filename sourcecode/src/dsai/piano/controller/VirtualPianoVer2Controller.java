@@ -1,6 +1,8 @@
 package dsai.piano.controller;
 
 
+import java.io.IOException;
+
 import dsai.piano.exception.NullPianoNoteException;
 import dsai.piano.model.VirtualPianoVer2;
 import dsai.piano.model.component.PianoNote;
@@ -16,6 +18,10 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -30,6 +36,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class VirtualPianoVer2Controller {
 	private VirtualPianoVer2 piano;
@@ -52,6 +59,8 @@ public class VirtualPianoVer2Controller {
 		}   	
 	};
 	
+	@FXML
+	private Button helpButton;
     @FXML
     private TextField keyLabel, titleLabel;
     @FXML
@@ -83,8 +92,29 @@ public class VirtualPianoVer2Controller {
     @FXML
     private ComboBox<Record> recordCombobox;
 
+    @FXML
+    void helpButtonPressed(ActionEvent event) throws IOException {
+    	HelpTextController helpController = new HelpTextController();
+    	helpController.showHelp();  
+    }
     
-    
+    @FXML
+    void backLabelClicked(MouseEvent event) throws IOException {
+    	final String HELP_FXML_FILE_PATH = "/dsai/piano/screen/fxmlSupporter/Main.fxml";
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(HELP_FXML_FILE_PATH));
+		
+		Parent root = fxmlLoader.load();	
+		
+		Scene scene = new Scene(root);
+		scene.getStylesheets().add(getClass().getResource("../screen/cssSupporter/MainSupporter.css").toExternalForm());
+		
+		Stage pianoStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		pianoStage.setScene(scene);
+
+		pianoStage.centerOnScreen();
+
+    	pianoStage.show();
+    }
     
     @FXML
     void notePressed(KeyEvent event) throws NullPianoNoteException {
@@ -93,15 +123,26 @@ public class VirtualPianoVer2Controller {
     	 * Throw NullPianoNoteException if the pressed key is not binded to piano Note.
     	 */
     	String keyChar = event.getText();
+    	PianoNote note = piano.getNotesMap().get(keyChar.toUpperCase());
 	    	try {
-	    		if (piano.getNotesMap().get(keyChar.toUpperCase()) != null) {
-	    			PianoNote note = piano.getNotesMap().get(keyChar.toUpperCase());
+	    		if (note != null) {
+	
 		    		if (this.enableKeys[note.getId()]) {
 		    			updateKeyLabel(note.getOriginalString());
 		    			piano.startNote(note);
 		    			this.enableKeys[note.getId()] = false;
-		    			
-		    			System.out.println(buttonMap.get(note.getKeyChar().toLowerCase()).getText());
+		    			Button button = buttonMap.get(note.getKeyChar().toLowerCase());
+		    			if (button.getText().indexOf('#')>=0) {
+		    				button.setStyle("-fx-background-insets: 0,0 0 7 0, 0 0 8 0, 0 0 9 0;\r\n"
+		    						+ "	-fx-border-color: #ff8300;\r\n"
+		    						+ "	-fx-border-width: 2;");
+		    			}   
+		    			else {
+		    				button.setStyle("-fx-background-color:  linear-gradient(#ffffff 0%, #e0e0e0 85%, #e0e0e0 85%);\r\n"
+	    					+ "	-fx-padding: 2 0 -2 0;\r\n"
+	    					+ "	-fx-background-insets: 2 0 -2 0;");
+		    			}
+		    			System.out.println(button.getText());
 		    		}
 	    		} else {
 	    			throw new NullPianoNoteException();
@@ -121,10 +162,15 @@ public class VirtualPianoVer2Controller {
     	String keyChar = event.getText();
     	try {
     		if (piano.getNotesMap().get(keyChar.toUpperCase()) != null) {
+    			
     			PianoNote note = piano.getNotesMap().get(keyChar.toUpperCase());
     			if (!this.enableKeys[note.getId()]) {
     				piano.stopNote(note);
     				this.enableKeys[note.getId()] = true;
+    				buttonMap.get(note.getKeyChar().toLowerCase()).setStyle("-fx-background-color:  linear-gradient(#ffffff 85%, #f8f8f8 88%, #e3e3e3 91%, #ffffff 100%);\r\n"
+    						+ "	-fx-padding: 0 0 0 0;\r\n"
+    						+ "	-fx-background-insets: 0 0 0 0;\r\n"
+    						+ "	-fx-background-radius:  2 0 10 8;");
     			} 
     		} else {
     			throw new NullPianoNoteException();

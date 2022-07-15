@@ -1,4 +1,4 @@
-package dsai.piano;
+package dsai.piano.view;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
