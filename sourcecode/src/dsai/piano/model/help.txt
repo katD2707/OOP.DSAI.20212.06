@@ -20,3 +20,16 @@
 * Back: You can go back to main screen by clicking "BACK" button.  
 
 * Exit: It will ask you to confirm before you leave.
+
+----Aims of the project----
+* Through this course, we have learned many things, get to know more about the Object oriented Programming.
+
+* Thanks to instruction of Prof. Trang, we understand much clearly about the power of OOP, how an application is built, how the inner of computer works.
+
+* Also, we are not only learn theory, but we also have lab time, that help us to practice what we have learned, based on very clearly guide from Prof.
+
+* And finally, we even make the first application on our own, thanks to OOP, it helps us to organize our class, clean code instead of throwing everything on one class.
+
+* I hope that in the future, we can actually make a product that useful for customer based on knowledge from this course.
+
+* Thank you, Prof. Trang. 
