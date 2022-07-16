@@ -1,36 +1,22 @@
-Toi la con nguoi
-Toi rat thong minh
-awev
+----Instruction----
+* Play a note: Click a note that appear on the screen to hear the sound of it, try some more notes to get familiar. 
+- Then you can try to pressed a note on the keyboard. If you don't know which key is note, don't worry, the "Keyboard assistant" will help you.
 
-asdv
-awe
-vaw
-ev
-awev
-adv
-ad
-nqaen
-q
-n
-sgn
-s
-rtns
-erbasdv;karewpoaerbambl;am','
-a.w
-'elgvaw;bmarbm;la;bmaldfblamfblam;erbm;lameb;rmaelmb.,dfnvz,.e;lfgiakndfblhaio32vkanbkjvasdmkca3fjvaskbvaqwmnfbohgskzbklenjkfklleskf
-serg
-ser
-g
-erb
-tn
-a
-b
-sbn
-sgn
-sren
-sern
+* Record: Let's record a song, click the "RECORD" button, then you are good to start making your own song. After finish, insert the title for song in the title bar and click "SAVE" button.
+- Now it has been saved in the song list, click "SONG" to choose song, then play it.
 
-sbekjrb
-ebser
-bs
-en
+* Volume: Cick "VOLUME" Button, the volume bar will appear, then you can drag and drop the volume bar to increase or decrease sound.
+
+* Instrument: Are you bored with piano? Let's try others instruments. Click "INSTRUMENT" then select type of instruments in the menu bar.
+
+* Octave: If you want to increase or decrease octave, click the green "Up" and "Down" arrow.
+
+* Edit: In case you misclick or mispress a key, you can fix it by the "Pencil" button right next to Octave arrow.
+
+* Clear: Delete all what you just played and start a new song.
+
+* Replay: Click "Replay" word to replay your song.
+
+* Back: You can go back to main screen by clicking "BACK" button.  
+
+* Exit: It will ask you to confirm before you leave.
